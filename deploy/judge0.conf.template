@@ -1,0 +1,80 @@
+# Judge0 configuration. Rendered to deploy/judge0.conf by deploy.sh —
+# edit this template, not the generated file.
+#
+# Full reference: https://github.com/judge0/judge0/blob/master/judge0.conf
+
+################################################################################
+# Judge0 Server
+################################################################################
+JUDGE0_TELEMETRY_ENABLE=false
+
+# Leave empty for an open instance. Because Judge0 is only published on
+# loopback and reached over the internal Docker network, the API does not send
+# a token by default. If you set one here, also set JUDGE0_API_KEY for the API.
+AUTHN_TOKEN=__JUDGE0_AUTHN_TOKEN__
+AUTHZ_TOKEN=__JUDGE0_AUTHZ_TOKEN__
+
+# Allow the batched submission sizes the API uses.
+MAX_SUBMISSION_BATCH_SIZE=__JUDGE0_MAX_BATCH_SIZE__
+
+################################################################################
+# Judge0 Workers
+################################################################################
+# Concurrent submissions being judged. Keep at or below the host's core count.
+COUNT=__JUDGE0_WORKER_COUNT__
+
+################################################################################
+# Resource limits — ceilings the API's per-submission values must fit inside
+#
+# Judge0 rejects a submission with 422 when any requested limit exceeds the
+# matching MAX_* here, so these MUST be >= the API's JUDGE0_*_LIMIT_MAX values
+# in .env.docker. Raised well past competitive-programming defaults: research
+# jobs train models and crunch datasets, and 15s / 512MB killed anything real.
+################################################################################
+CPU_TIME_LIMIT=120
+MAX_CPU_TIME_LIMIT=900
+CPU_EXTRA_TIME=2
+MAX_CPU_EXTRA_TIME=10
+# Wall time must exceed CPU time or an I/O-bound job dies before its CPU
+# allowance is spent.
+WALL_TIME_LIMIT=180
+MAX_WALL_TIME_LIMIT=1800
+
+MEMORY_LIMIT=1024000
+MAX_MEMORY_LIMIT=4096000
+STACK_LIMIT=128000
+MAX_STACK_LIMIT=512000
+
+# Numeric/ML libraries spawn worker threads; 60 is far too few for e.g. numpy
+# with OpenBLAS.
+MAX_PROCESSES_AND_OR_THREADS=256
+MAX_MAX_PROCESSES_AND_OR_THREADS=512
+
+# Kilobytes a submission may write. Artifacts are produced through stdout
+# markers, but scratch files during a run still land on disk.
+MAX_FILE_SIZE=131072
+MAX_MAX_FILE_SIZE=524288
+
+# Untrusted code must not reach the network.
+ENABLE_NETWORK=false
+
+# We poll for results instead of blocking the judge on ?wait=true.
+ENABLE_WAIT_RESULT=false
+ENABLE_COMPILER_OPTIONS=true
+ALLOW_ENABLE_NETWORK=false
+
+################################################################################
+# Judge0 Postgres — consumed by both Judge0 and its postgres container
+################################################################################
+POSTGRES_HOST=judge0-db
+POSTGRES_PORT=5432
+POSTGRES_DB=__JUDGE0_POSTGRES_DB__
+POSTGRES_USER=__JUDGE0_POSTGRES_USER__
+POSTGRES_PASSWORD=__JUDGE0_POSTGRES_PASSWORD__
+
+################################################################################
+# Judge0 Redis
+################################################################################
+REDIS_HOST=judge0-redis
+REDIS_PORT=6379
+REDIS_PASSWORD=__JUDGE0_REDIS_PASSWORD__

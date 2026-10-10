@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A newer push to the same branch makes the in-flight run irrelevant.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    name: API — typecheck & build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # The Prisma client is generated, not vendored, and `tsc` needs its types
+      # before it can resolve anything that touches the database.
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - run: npm run typecheck
+
+      - run: npm run build
+
+  web:
+    name: Web — build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install
+        run: npm ci
+        working-directory: web
+
+      # `next build` runs TypeScript as part of the build, so there is no
+      # separate typecheck step here.
+      - name: Build
+        run: npm run build
+        working-directory: web
+
+  schema:
+    name: Prisma — schema and migrations agree
+    runs-on: ubuntu-latest
+
+    # `migrate diff --from-migrations` replays every migration into a scratch
+    # database, so it needs a real Postgres to talk to.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: shadow
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/shadow?schema=public
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Validate schema
+        run: npx prisma validate
+
+      # Catches a schema.prisma edited without a matching migration — drift that
+      # otherwise stays invisible until `migrate deploy` fails in production.
+      # --exit-code makes a non-empty diff fail the job.
+      - name: Fail if schema.prisma has drifted from the migrations
+        run: |
+          npx prisma migrate diff \
+            --from-migrations ./prisma/migrations \
+            --to-schema-datamodel ./prisma/schema.prisma \
+            --shadow-database-url "$DATABASE_URL" \
+            --exit-code

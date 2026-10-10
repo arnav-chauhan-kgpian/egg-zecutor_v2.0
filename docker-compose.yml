@@ -1,0 +1,266 @@
+# Full platform stack: API, frontend, PostgreSQL, and Judge0 (server + workers
+# + its own Postgres and Redis, per Judge0's standard deployment).
+#
+# Configuration comes from .env.docker — always pass it explicitly, otherwise
+# Compose picks up the development .env instead:
+#
+#   docker compose --env-file .env.docker up -d
+#
+# Or just run ./deploy.sh, which does that plus migrations and seeding.
+#
+# IMPORTANT: Judge0 v1.13.x requires cgroup v1 on the host. See README.
+
+name: hackerrank-clone
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: '10m'
+    max-file: '3'
+
+services:
+  # ---------------------------------------------------------------- app database
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:-hackerrank_clone}
+    volumes:
+      - app-db-data:/var/lib/postgresql/data
+    # Bound to loopback only. Host port defaults to 5435: 5432/5433 collide with
+    # local Postgres installs, and Windows (Hyper-V/WSL2) reserves blocks of the
+    # dynamic port range, which makes low ports fail with "bind: An attempt was
+    # made to access a socket in a way forbidden by its access permissions".
+    # Only the HOST side moves — in-network clients still use 5432.
+    ports:
+      - '127.0.0.1:${POSTGRES_PORT:-5435}:5432'
+    healthcheck:
+      test:
+        ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-hackerrank_clone}']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    logging: *default-logging
+
+  # ------------------------------------------------- migrations + seed (one-shot)
+  # Runs `prisma migrate deploy` then `prisma db seed`, then exits. The API waits
+  # for this to complete successfully before starting.
+  migrate:
+    build:
+      context: .
+      target: migrator
+    restart: 'no'
+    environment:
+      # Built from the POSTGRES_* vars rather than passed through as
+      # ${DATABASE_URL}: that variable is host-oriented (localhost:${POSTGRES_PORT})
+      # in the development .env, and inside a container `localhost` is the
+      # container itself. Deriving it here keeps the in-network address correct
+      # whether Compose loads .env or .env.docker.
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@postgres:5432/${POSTGRES_DB:-hackerrank_clone}?schema=public
+      BCRYPT_SALT_ROUNDS: ${BCRYPT_SALT_ROUNDS:-10}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    logging: *default-logging
+
+  # ------------------------------------------------------------------- Express API
+  api:
+    build:
+      context: .
+      target: runtime
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      # See the note on the migrate service: derived, not passed through.
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}@postgres:5432/${POSTGRES_DB:-hackerrank_clone}?schema=public
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET is required (min 32 chars)}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-7d}
+      BCRYPT_SALT_ROUNDS: ${BCRYPT_SALT_ROUNDS:-10}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+      REQUEST_BODY_LIMIT: ${REQUEST_BODY_LIMIT:-64mb}
+
+      # Reaches Judge0 over the internal network. Uses `-` rather than `:-` so
+      # an explicitly empty value is honoured.
+      JUDGE0_API_URL: ${JUDGE0_API_URL-http://judge0-server:2358}
+      JUDGE0_AUTH_TOKEN: ${JUDGE0_AUTHN_TOKEN-}
+
+      # Research defaults, far above competitive-programming limits. A single
+      # request may override both, up to the *_MAX ceilings.
+      JUDGE0_CPU_TIME_LIMIT: ${JUDGE0_CPU_TIME_LIMIT:-120}
+      JUDGE0_MEMORY_LIMIT: ${JUDGE0_MEMORY_LIMIT:-1024000}
+      JUDGE0_CPU_TIME_LIMIT_MAX: ${JUDGE0_CPU_TIME_LIMIT_MAX:-900}
+      JUDGE0_MEMORY_LIMIT_MAX: ${JUDGE0_MEMORY_LIMIT_MAX:-4096000}
+      # Judge0 enforces wall time separately from CPU time; an I/O-bound job
+      # needs headroom above its CPU allowance or it is killed early.
+      JUDGE0_WALL_TIME_MARGIN: ${JUDGE0_WALL_TIME_MARGIN:-60}
+      JUDGE0_WALL_TIME_MAX: ${JUDGE0_WALL_TIME_MAX:-1800}
+
+      # Webhook Judge0 posts results to. Must be resolvable FROM the
+      # judge0-server container, so it is the Compose service name — NOT
+      # localhost, which inside that container is Judge0 itself.
+      JUDGE0_CALLBACK_URL: ${JUDGE0_CALLBACK_URL-http://api:4000/api/v1/executions/callback}
+      JUDGE0_CALLBACK_SECRET: ${JUDGE0_CALLBACK_SECRET-}
+      JUDGE0_REQUEST_TIMEOUT_MS: ${JUDGE0_REQUEST_TIMEOUT_MS:-30000}
+      # Reconciler sweep interval, and how long a run may sit in PROCESSING
+      # before it is declared FAILED.
+      JUDGE0_POLL_INTERVAL_MS: ${JUDGE0_POLL_INTERVAL_MS:-2000}
+      JUDGE0_MAX_WAIT_MS: ${JUDGE0_MAX_WAIT_MS:-1900000}
+
+      ARTIFACT_MAX_TOTAL_BYTES: ${ARTIFACT_MAX_TOTAL_BYTES:-8388608}
+      ARTIFACT_MAX_COUNT: ${ARTIFACT_MAX_COUNT:-20}
+      ADDITIONAL_FILES_MAX_BASE64_BYTES: ${ADDITIONAL_FILES_MAX_BASE64_BYTES:-33554432}
+
+      # Abuse controls. Concurrency caps matter more than the rate limit: a few
+      # long jobs pin the host long after the request rate looks calm.
+      RATE_LIMIT_WINDOW_MS: ${RATE_LIMIT_WINDOW_MS:-60000}
+      RATE_LIMIT_MAX_RUNS: ${RATE_LIMIT_MAX_RUNS:-20}
+      RATE_LIMIT_MAX_AUTH: ${RATE_LIMIT_MAX_AUTH:-20}
+      MAX_CONCURRENT_RUNS_PER_USER: ${MAX_CONCURRENT_RUNS_PER_USER:-3}
+      MAX_CONCURRENT_RUNS_TOTAL: ${MAX_CONCURRENT_RUNS_TOTAL:-12}
+
+      # Execution backend: judge0 | docker | auto.
+      EXECUTOR: ${EXECUTOR:-auto}
+      EXECUTOR_IMAGE_PYTHON: ${EXECUTOR_IMAGE_PYTHON:-python:3.11-alpine}
+      EXECUTOR_IMAGE_NODE: ${EXECUTOR_IMAGE_NODE:-node:20-alpine}
+      EXECUTOR_IMAGE_CPP: ${EXECUTOR_IMAGE_CPP:-gcc:13}
+      EXECUTOR_IMAGE_BASH: ${EXECUTOR_IMAGE_BASH:-bash:5}
+      EXECUTOR_CPUS: ${EXECUTOR_CPUS:-1}
+      EXECUTOR_PIDS_LIMIT: ${EXECUTOR_PIDS_LIMIT:-128}
+      EXECUTOR_TMPFS_MB: ${EXECUTOR_TMPFS_MB:-64}
+      EXECUTOR_CONCURRENCY: ${EXECUTOR_CONCURRENCY:-2}
+      EXECUTOR_COMPILE_MEMORY_MB: ${EXECUTOR_COMPILE_MEMORY_MB:-1024}
+      EXECUTOR_COMPILE_CPUS: ${EXECUTOR_COMPILE_CPUS:-2}
+      EXECUTOR_COMPILE_TIMEOUT_S: ${EXECUTOR_COMPILE_TIMEOUT_S:-30}
+      EXECUTOR_MAX_OUTPUT_BYTES: ${EXECUTOR_MAX_OUTPUT_BYTES:-4194304}
+      EXECUTOR_STARTUP_GRACE_MS: ${EXECUTOR_STARTUP_GRACE_MS:-15000}
+    ports:
+      # Loopback by default. The api container can reach the docker socket, so
+      # publishing it on 0.0.0.0 exposes that trust boundary to your whole LAN.
+      # Set BIND_ADDRESS=0.0.0.0 only if you deliberately want remote access.
+      - '${BIND_ADDRESS:-127.0.0.1}:${API_PORT:-4000}:4000'
+    volumes:
+      # Required by EXECUTOR=docker. NOTE: access to this socket is equivalent
+      # to root on the host — fine for local development, but front it with a
+      # socket proxy (or move execution to a disposable VM) before exposing
+      # this deployment to untrusted users.
+      - /var/run/docker.sock:/var/run/docker.sock
+    # The image runs as the unprivileged `node` user, but the socket is
+    # root:root mode 660 — group 0 grants access without running as uid 0.
+    group_add:
+      - '0'
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    # No depends_on for judge0-server: the API only calls it per-submission, not
+    # at startup, and the judge0 services sit behind an opt-in profile. A
+    # depends_on pointing into an inactive profile makes Compose refuse to start.
+    logging: *default-logging
+
+  # ---------------------------------------------------------------- Next.js frontend
+  web:
+    build:
+      context: ./web
+      target: runtime
+      args:
+        # Baked into the client bundle at build time, so it must be reachable
+        # from the user's browser (not a Docker service name).
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      # Used only by server-side rendering, inside the network.
+      API_INTERNAL_URL: ${API_INTERNAL_URL:-http://api:4000}
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000}
+    ports:
+      - '${BIND_ADDRESS:-127.0.0.1}:${WEB_PORT:-3000}:3000'
+    depends_on:
+      api:
+        condition: service_started
+    logging: *default-logging
+
+  # ============================================================== Judge0 stack ==
+  # Mirrors Judge0's standard deployment: server + workers sharing a config file,
+  # backed by a dedicated Postgres and Redis.
+  #
+  # OPT-IN via the `judge0` profile — `docker compose up -d` does NOT start these.
+  # Judge0 1.13.x needs cgroup v1; on a cgroup v2 host (Docker Desktop / WSL2,
+  # and any modern Linux) isolate cannot build its jails and every submission
+  # comes back "Internal Error". Mock grading is the default instead.
+  #
+  # To run the real judge on a cgroup v1 host:
+  #   set JUDGE0_API_URL=http://judge0-server:2358 in .env.docker, then
+  #   docker compose --env-file .env.docker --profile judge0 up -d
+
+  judge0-server:
+    image: judge0/judge0:${JUDGE0_VERSION:-1.13.1}
+    profiles: ['judge0']
+    # isolate (the sandbox) needs kernel privileges to build its jails.
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - ./deploy/judge0.conf:/judge0.conf:ro
+    ports:
+      # Loopback only; the API talks to it over the internal network.
+      - '127.0.0.1:${JUDGE0_PORT:-2358}:2358'
+    depends_on:
+      judge0-db:
+        condition: service_healthy
+      judge0-redis:
+        condition: service_healthy
+    logging: *default-logging
+
+  judge0-workers:
+    image: judge0/judge0:${JUDGE0_VERSION:-1.13.1}
+    profiles: ['judge0']
+    command: ['./scripts/workers']
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - ./deploy/judge0.conf:/judge0.conf:ro
+    depends_on:
+      judge0-server:
+        condition: service_started
+    logging: *default-logging
+
+  judge0-db:
+    image: postgres:16-alpine
+    profiles: ['judge0']
+    restart: unless-stopped
+    env_file: ./deploy/judge0.conf
+    volumes:
+      - judge0-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${JUDGE0_POSTGRES_USER:-judge0}']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    logging: *default-logging
+
+  judge0-redis:
+    image: redis:7-alpine
+    profiles: ['judge0']
+    restart: unless-stopped
+    env_file: ./deploy/judge0.conf
+    # Alpine has no bash, so use sh. $$ escapes the $ for Compose so the shell
+    # inside the container expands REDIS_PASSWORD from judge0.conf.
+    command:
+      ['sh', '-c', 'exec redis-server --appendonly no --requirepass "$$REDIS_PASSWORD"']
+    volumes:
+      - judge0-redis-data:/data
+    healthcheck:
+      test: ['CMD-SHELL', 'redis-cli -a "$$REDIS_PASSWORD" ping | grep -q PONG']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    logging: *default-logging
+
+volumes:
+  app-db-data:
+  judge0-db-data:
+  judge0-redis-data:

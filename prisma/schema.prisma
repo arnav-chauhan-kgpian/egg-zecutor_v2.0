@@ -1,0 +1,157 @@
+// Prisma schema for the AI research code execution engine.
+// Docs: https://pris.ly/d/prisma-schema
+//
+// Refactored away from the LeetCode-style model: Problem, TestCase and
+// Submission (plus the Difficulty and SubmissionStatus enums) are gone. There
+// are no hidden test cases and no expected output — a run is just "execute this
+// script under these limits and give me back everything it produced".
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  username     String   @unique
+  passwordHash String
+  role         String   @default("USER")
+  createdAt    DateTime @default(now())
+
+  executions Execution[]
+  agentSessions AgentSession[]
+  memoryArtifacts MemoryArtifact[]
+
+  @@map("users")
+}
+
+/// One run of one script.
+model Execution {
+  id     String @id @default(uuid())
+  userId String
+
+  /// Source text. Stored verbatim, never interpreted by the API.
+  code String
+  /// Judge0 language id (e.g. 71 = Python 3.8.1). Numeric so any language the
+  /// configured Judge0 instance supports works without an API change.
+  languageId Int
+  /// Optional free-text label so runs are findable later.
+  name String?
+
+  status String @default("PENDING")
+
+  /// Fed to the program on stdin.
+  stdin String?
+  /// Base64-encoded zip, forwarded to Judge0 as `additional_files` and
+  /// unpacked into the working directory before the run.
+  additionalFiles String?
+
+  /// Per-run limits. Null means "use the engine default".
+  timeLimit   Float? // seconds of CPU time
+  memoryLimit Int? // kilobytes
+
+  stdout        String?
+  stderr        String?
+  compileOutput String?
+  /// Judge0's own verdict text, e.g. "Accepted", "Time Limit Exceeded".
+  judgeStatus String?
+  exitCode    Int?
+  /// Measured CPU time in milliseconds and peak memory in kilobytes.
+  timeMs   Int?
+  memoryKb Int?
+  /// Populated when status is FAILED — why the engine gave up.
+  errorMessage String?
+
+  /// Judge0 submission token; null when another backend ran it.
+  judge0Token String? @unique
+
+  /// Optional owning LangGraph agent session (thread_id = AgentSession.id).
+  agentSessionId String?
+  agentSession   AgentSession? @relation(fields: [agentSessionId], references: [id], onDelete: SetNull)
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  startedAt   DateTime?
+  completedAt DateTime?
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  artifacts Artifact[]
+
+  @@index([userId, createdAt])
+  @@index([status])
+  @@index([agentSessionId])
+  @@map("executions")
+}
+
+/// A file produced by a run — a chart, a JSON result, a CSV.
+///
+/// Emitted by the program itself via a stdout marker (see the artifact parser)
+/// and stored inline: research outputs are small and keeping them in the row
+/// avoids needing object storage to read a result back.
+model Artifact {
+  id          String @id @default(uuid())
+  executionId String
+
+  /// Filename as declared by the program, sanitised to a basename.
+  name String
+  /// Declared MIME type, defaulted by extension when the program omits it.
+  mimeType String @default("application/octet-stream")
+  /// Base64 payload.
+  content   String
+  sizeBytes Int
+
+  createdAt DateTime @default(now())
+
+  execution Execution @relation(fields: [executionId], references: [id], onDelete: Cascade)
+
+  @@index([executionId])
+  @@map("artifacts")
+}
+
+/// A stateful LangGraph agent session. The row id is used verbatim as the
+/// LangGraph `thread_id`, so checkpoint rows written by PostgresSaver line up
+/// 1:1 with this record. Status is ACTIVE | SUSPENDED | COMPLETED.
+model AgentSession {
+  id     String @id @default(uuid())
+  userId String
+
+  status String @default("ACTIVE")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  executions Execution[]
+
+  @@index([userId])
+  @@index([status])
+  @@map("agent_sessions")
+}
+
+/// Long-term memory chunk owned by a user, with a pgvector embedding for
+/// cosine-similarity recall. `metadata` carries free-form JSON (source,
+/// session id, tool name, ...). Backed by the `vector` extension + an HNSW
+/// index (see the agent_memory migration).
+model MemoryArtifact {
+  id     String @id @default(uuid())
+  userId String
+
+  /// Raw text content of the memory.
+  content String @db.Text
+  /// 1536-dim embedding (e.g. text-embedding-3-small). Null until embedded.
+  embedding Unsupported("vector(1536)")?
+  /// Free-form JSON metadata.
+  metadata  Json?
+
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("memory_artifacts")
+}

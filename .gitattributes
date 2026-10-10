@@ -1,0 +1,16 @@
+# Files consumed by a shell inside a Linux container must keep LF endings.
+# With CRLF, `source`d values carry a trailing \r — Judge0 fails at startup with
+# `seq: invalid floating point argument: '10\r'` — and bash scripts fail to run.
+* text=auto eol=lf
+
+*.sh            text eol=lf
+deploy/*.conf   text eol=lf
+deploy/*.template text eol=lf
+Dockerfile      text eol=lf
+
+# Binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
