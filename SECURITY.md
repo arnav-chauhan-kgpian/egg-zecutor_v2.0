@@ -6,7 +6,7 @@ reading before you deploy it anywhere other than your own machine.
 ## Reporting a vulnerability
 
 Please do **not** open a public issue for a security problem. Use GitHub's
-[private vulnerability reporting](https://github.com/arnav-chauhan-kgpian/egg-zecutor/security/advisories/new)
+[private vulnerability reporting](https://github.com/arnav-chauhan-kgpian/egg-zecutor_v2.0/security/advisories/new)
 instead. Include a description, reproduction steps, and the impact you think it has.
 
 This is a personal project with no SLA. Expect a first response within a week or so.

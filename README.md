@@ -1,4 +1,4 @@
-# Egg-zecutor 2.0
+# ExecLab
 
 [![CI](https://github.com/arnav-chauhan-kgpian/egg-zecutor_v2.0/actions/workflows/ci.yml/badge.svg)](https://github.com/arnav-chauhan-kgpian/egg-zecutor_v2.0/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -8,7 +8,7 @@ A generic code execution engine for AI research workloads, powered by Judge0. No
 TypeScript API with Prisma on PostgreSQL and JWT auth, plus a Next.js execution playground in
 [`web/`](./web/README.md).
 
-> **What's new in 2.0 — a stateful AI agent platform on top of the engine:**
+> **What's new in ExecLab:**
 > LangGraph orchestrator (Groq default, OpenAI fallback) with **8 user-toggleable
 > tools** (sandbox, shell, calculator, web search, vector memory, artifacts, workspace),
 > **human-in-the-loop approvals** for sensitive actions, SSE-streamed chat

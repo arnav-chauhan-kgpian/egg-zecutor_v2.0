@@ -8,8 +8,8 @@ logs, stats and any files it produced.
 ## Easiest path: run it from source
 
 ```bash
-git clone https://github.com/arnav-chauhan-kgpian/egg-zecutor.git
-cd egg-zecutor
+git clone https://github.com/arnav-chauhan-kgpian/egg-zecutor_v2.0.git
+cd egg-zecutor_v2.0
 npm install
 npm run dev
 ```

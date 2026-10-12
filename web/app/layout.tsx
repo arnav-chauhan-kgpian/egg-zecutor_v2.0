@@ -4,7 +4,7 @@ import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Egg-zecutor 2.0 — AI agent execution playground',
+  title: 'ExecLab — AI agent execution playground',
   description: 'Run sandboxed code and chat with a tool-using research agent.',
 };
 

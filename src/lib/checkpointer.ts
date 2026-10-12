@@ -20,7 +20,7 @@ export const checkpointerPool = new pg.Pool({
   max: poolMax(),
   idleTimeoutMillis: 30_000,
   connectionTimeoutMillis: 10_000,
-  application_name: 'egg-zecutor-checkpointer',
+  application_name: 'execlab-checkpointer',
 });
 
 checkpointerPool.on('error', (error) => {

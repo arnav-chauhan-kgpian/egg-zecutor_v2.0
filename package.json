@@ -1,8 +1,8 @@
 {
-  "name": "egg-zecutor-api",
+  "name": "execlab-api",
   "version": "1.0.0",
   "private": true,
-  "description": "Egg-zecutor 2.0 - code execution engine and AI agent API",
+  "description": "ExecLab - code execution engine and AI agent API",
   "main": "dist/server.js",
   "engines": {
     "node": ">=20"

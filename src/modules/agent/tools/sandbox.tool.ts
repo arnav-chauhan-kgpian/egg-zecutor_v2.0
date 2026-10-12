@@ -33,7 +33,7 @@ export const sandboxInputSchema = z.object({
 export type SandboxInput = z.infer<typeof sandboxInputSchema>;
 
 /**
- * Run code in the egg-zecutor sandbox and wait for the verdict.
+ * Run code in the ExecLab sandbox and wait for the verdict.
  *
  * Large `::artifact::` base64 blobs are never returned verbatim: the engine
  * already lifts them into Artifact rows, and any residual markers are

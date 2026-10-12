@@ -38,7 +38,7 @@ export function createAgentModel(): ChatGroq | ChatOpenAI {
   return new ChatOpenAI({ model: agentModelName(), temperature: 0 });
 }
 
-const SYSTEM_PROMPT = `You are the egg-zecutor research agent. Work step by step.
+const SYSTEM_PROMPT = `You are the ExecLab research agent. Work step by step.
 
 1. Formulate a short plan before acting, and state it briefly.
 2. Prefer sandboxed execution (execute_code_sandbox, default Python) over guessing: run computations, verify results, and iterate.
