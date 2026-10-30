@@ -2,23 +2,26 @@
  * Text embeddings for the MemoryArtifact vector store.
  *
  * Provider chain (first usable wins):
- *   1. HuggingFace Inference API (`sentence-transformers/all-MiniLM-L6-v2` by
+ *   1. Local Ollama embeddings (LLM_PROVIDER=ollama) - free, on-GPU/CPU,
+ *      no credits. Default model nomic-embed-text via OLLAMA_EMBEDDING_MODEL.
+ *   2. HuggingFace Inference API (`sentence-transformers/all-MiniLM-L6-v2` by
  *      default, override with HF_EMBEDDING_MODEL; auth via HF_API_KEY/HF_TOKEN,
- *      optional but strongly recommended) — real semantic vectors.
- *   2. OpenAI `text-embedding-3-small` (1536 dims natively) when OPENAI_API_KEY
+ *      required since HF gated serverless inference behind credits).
+ *   3. OpenAI `text-embedding-3-small` (1536 dims natively) when OPENAI_API_KEY
  *      is set.
- *   3. Deterministic hash-based pseudo-embedding so RAG/memory tools keep
- *      working offline — with clearly degraded recall.
+ *   4. Deterministic hash-based pseudo-embedding so RAG/memory tools keep
+ *      working offline - with clearly degraded recall.
  *
- * The pgvector column is `vector(1536)`, wider than most HF sentence models
- * (MiniLM = 384). HF vectors are fitted by truncation/zero-padding and then
- * L2-normalised; padding is consistent across rows so cosine ordering stays
- * meaningful. The fitted length is always EMBEDDING_DIM.
+ * The pgvector column is `vector(1536)`, wider than most sentence models
+ * (MiniLM = 384, nomic = 768). Non-native vectors are fitted by
+ * truncation/zero-padding and then L2-normalised; padding is consistent
+ * across rows so cosine ordering stays meaningful. The fitted length is
+ * always EMBEDDING_DIM.
  */
 
 export const EMBEDDING_DIM = 1536;
 
-export type EmbeddingProvider = 'huggingface' | 'openai' | 'fallback';
+export type EmbeddingProvider = 'ollama' | 'huggingface' | 'openai' | 'fallback';
 
 function fallbackEmbed(text: string): number[] {
   const vec = new Array<number>(EMBEDDING_DIM).fill(0);
@@ -95,6 +98,39 @@ function hfToken(): string | undefined {
   return process.env.HF_API_KEY ?? process.env.HF_TOKEN ?? undefined;
 }
 
+/**
+ * Local embeddings via Ollama (Thor path): no account, no credits, no data
+ * leaving the machine. Tries /api/embed first, falls back to /api/embeddings.
+ */
+async function ollamaEmbed(text: string): Promise<number[]> {
+  const base = (process.env.OLLAMA_BASE_URL ?? 'http://localhost:11434').replace(/\/$/, '');
+  const model = process.env.OLLAMA_EMBEDDING_MODEL ?? 'nomic-embed-text';
+  const trimmed = text.slice(0, 8000);
+  try {
+    const res = await fetch(`${base}/api/embed`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model, input: trimmed }),
+      signal: AbortSignal.timeout(60_000),
+    });
+    if (!res.ok) throw new Error(`Ollama /api/embed HTTP ${res.status}`);
+    const body = (await res.json()) as { embeddings?: unknown };
+    return fitToDim(toVector(body.embeddings));
+  } catch (first) {
+    const res = await fetch(`${base}/api/embeddings`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model, prompt: trimmed }),
+      signal: AbortSignal.timeout(60_000),
+    }).catch(() => {
+      throw first;
+    });
+    if (!res.ok) throw first;
+    const body = (await res.json()) as { embedding?: unknown };
+    return fitToDim(toVector(body.embedding));
+  }
+}
+
 async function postEmbedding(endpoint: string, model: string, text: string, token?: string): Promise<number[]> {
   const res = await fetch(endpoint, {
     method: 'POST',
@@ -152,10 +188,17 @@ async function openaiEmbed(text: string, apiKey: string): Promise<number[]> {
 }
 
 export async function embedText(text: string): Promise<{ vector: number[]; provider: EmbeddingProvider }> {
+  if ((process.env.LLM_PROVIDER ?? '').toLowerCase() === 'ollama') {
+    try {
+      return { vector: await ollamaEmbed(text), provider: 'ollama' };
+    } catch {
+      // Ollama down or model missing - try the cloud providers.
+    }
+  }
   try {
     return { vector: await huggingfaceEmbed(text), provider: 'huggingface' };
   } catch {
-    // Cold model, unknown model id, no network — try the next provider.
+    // Cold model, unknown model id, no credits/network - try the next provider.
   }
   const openaiKey = process.env.OPENAI_API_KEY;
   if (openaiKey) {

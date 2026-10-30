@@ -335,7 +335,8 @@ export function AgentChatPane({ onAgentExecution }: { onAgentExecution: (executi
         case 'complete': {
           streamItemIdRef.current = null;
           setSessionStatus(event.data.status);
-          setShowApproval(false);
+          // Keep the modal open on SUSPENDED so the user can approve/reject.
+          if (event.data.status !== 'SUSPENDED') setShowApproval(false);
           finishSteps(event.data.status === 'SUSPENDED' ? 'Paused — awaiting approval' : 'Response ready');
           if (event.data.agentSessionId) {
             setSessionId(event.data.agentSessionId);

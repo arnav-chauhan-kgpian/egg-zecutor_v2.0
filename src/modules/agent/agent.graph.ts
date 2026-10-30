@@ -8,6 +8,7 @@ import {
   type LangGraphRunnableConfig,
 } from '@langchain/langgraph';
 import { ChatGroq } from '@langchain/groq';
+import { ChatOllama } from '@langchain/ollama';
 import { ChatOpenAI } from '@langchain/openai';
 import { checkpointer } from '../../lib/checkpointer';
 import { getToolsForSession } from './tools';
@@ -19,20 +20,46 @@ export const SANDBOX_TOOL = 'execute_code_sandbox';
 /** Sandbox runs at or under this many seconds run unreviewed. */
 export const SANDBOX_AUTO_APPROVE_SECONDS = 300;
 
+export type LlmProvider = 'ollama' | 'groq' | 'openai';
+
+/**
+ * Explicit provider wins; otherwise Groq when its key is set, else OpenAI.
+ * Set LLM_PROVIDER=ollama on GPU hosts (Thor) to use a self-hosted model and
+ * drop all paid chat dependencies.
+ */
+export function llmProvider(): LlmProvider {
+  const explicit = (process.env.LLM_PROVIDER ?? '').toLowerCase();
+  if (explicit === 'ollama' || explicit === 'groq' || explicit === 'openai') return explicit;
+  if (process.env.GROQ_API_KEY) return 'groq';
+  return 'openai';
+}
+
 export function agentModelName(): string {
-  if (process.env.GROQ_API_KEY) {
-    return process.env.AGENT_MODEL ?? 'openai/gpt-oss-120b';
+  if (process.env.AGENT_MODEL) return process.env.AGENT_MODEL;
+  switch (llmProvider()) {
+    case 'ollama':
+      return process.env.OLLAMA_MODEL ?? 'qwen3:32b';
+    case 'groq':
+      return 'openai/gpt-oss-120b';
+    case 'openai':
+      return 'gpt-4o-mini';
   }
-  return process.env.AGENT_MODEL ?? 'gpt-4o-mini';
 }
 
 /**
- * Chat model for the reasoner. Groq (OpenAI-compatible, tool-calling capable)
- * when GROQ_API_KEY is set, otherwise OpenAI. The default model is chosen per
- * provider since model ids are not portable across them.
+ * Chat model for the reasoner. Ollama (self-hosted, tool-calling capable) when
+ * LLM_PROVIDER=ollama, else Groq when its key is set, else OpenAI. The default
+ * model is chosen per provider since model ids are not portable across them.
  */
-export function createAgentModel(): ChatGroq | ChatOpenAI {
-  if (process.env.GROQ_API_KEY) {
+export function createAgentModel(): ChatOllama | ChatGroq | ChatOpenAI {
+  if (llmProvider() === 'ollama') {
+    return new ChatOllama({
+      baseUrl: process.env.OLLAMA_BASE_URL ?? 'http://localhost:11434',
+      model: agentModelName(),
+      temperature: 0,
+    });
+  }
+  if (llmProvider() === 'groq') {
     return new ChatGroq({ model: agentModelName(), temperature: 0 });
   }
   return new ChatOpenAI({ model: agentModelName(), temperature: 0 });
@@ -71,15 +98,41 @@ export function callNeedsApproval(call: ToolCall): boolean {
   return false;
 }
 
-/** a. Reasoner — prune, bind session tools, invoke the model. */
+/** Extract retry-after seconds from a Groq/OpenAI 429 error, if present. */
+function retryAfterSeconds(error: unknown): number | null {
+  const msg = error instanceof Error ? error.message : String(error);
+  const match = msg.match(/try again in ([\d.]+)s/i);
+  if (match) return Math.ceil(parseFloat(match[1]));
+  // Some SDKs expose headers; fall back to a sane default.
+  return null;
+}
+
+function isRateLimit(error: unknown): boolean {
+  const msg = error instanceof Error ? error.message : String(error);
+  return /rate.?limit|429|tokens per minute/i.test(msg);
+}
+
+/** a. Reasoner — prune, bind session tools, invoke the model (with 429 retry). */
 async function reasonerNode(state: AgentStateType): Promise<AgentStateUpdate> {
   const tools = getToolsForSession(state.userId, state.agentSessionId, state.enabledTools);
   const model = createAgentModel().bindTools(tools);
-  const response = await model.invoke([
-    new SystemMessage(SYSTEM_PROMPT),
-    ...pruneMessagesForModel(state.messages),
-  ]);
-  return { messages: [response] };
+  const MAX_ATTEMPTS = 4;
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const response = await model.invoke([
+        new SystemMessage(SYSTEM_PROMPT),
+        ...pruneMessagesForModel(state.messages),
+      ]);
+      return { messages: [response] };
+    } catch (error) {
+      lastError = error;
+      if (!isRateLimit(error) || attempt === MAX_ATTEMPTS) throw error;
+      const wait = retryAfterSeconds(error) ?? Math.min(30, 5 * 2 ** (attempt - 1));
+      await new Promise((resolve) => setTimeout(resolve, wait * 1000));
+    }
+  }
+  throw lastError;
 }
 
 export interface ApprovalResume {

@@ -45,7 +45,7 @@ export function ApprovalModal({ open, pendingToolCalls, busy, onApprove, onRejec
   if (!open) return null;
 
   return (
-    <div className="absolute inset-0 z-10 flex items-center justify-center bg-slate-950/50 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4">
       <div className="w-full max-w-md rounded-lg border border-amber-300 bg-white shadow-xl dark:border-amber-800 dark:bg-slate-900">
         <div className="border-b border-amber-200 bg-amber-100 px-4 py-2 dark:border-amber-900 dark:bg-amber-950">
           <p className="text-sm font-semibold text-amber-900 dark:text-amber-100">
