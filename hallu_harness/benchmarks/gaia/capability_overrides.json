@@ -1,0 +1,21 @@
+{
+  "about": "Hand-checked exceptions to the capability rules in capabilities.py, reviewed 2026-10-29 over all 118 questions the rules call solvable. Task ids and reasons only: GAIA's terms keep its questions and answers out of the repository.",
+  "overrides": {
+    "23dd907f-1261-4488-b21c-e9185af91d5e": {
+      "solvable": false,
+      "reason": "The answer depends on which lines of a poem are indented; the page-to-text conversion does not keep indentation."
+    },
+    "5f982798-16b9-4051-ab57-cfc7ebdb2a91": {
+      "solvable": false,
+      "reason": "The answer is read off diagrams (X-ray time profiles) in papers; the tools show figures only as alt text."
+    },
+    "708b99c5-e4a7-49cb-a5cf-933c8d46470d": {
+      "solvable": false,
+      "reason": "The answer is a visual property (bubble size) of an interactive JavaScript graph on Connected Papers, which visit_webpage cannot render."
+    },
+    "72e110e7-464c-453c-a309-90a95aed6538": {
+      "solvable": false,
+      "reason": "The answer depends on country flag icons in BASE search results; images cannot be seen."
+    }
+  }
+}

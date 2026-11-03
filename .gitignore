@@ -30,3 +30,8 @@ deploy/judge0.conf
 prisma/schema.sqlite.prisma
 prisma/*.db
 prisma/*.db-journal
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo

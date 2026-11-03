@@ -1,0 +1,5478 @@
+{
+ "sources": {
+  "pipreqs": {
+   "url": "https://raw.githubusercontent.com/bndr/pipreqs/48dbafd39003b9de177b8d314795e45797555850/pipreqs/mapping",
+   "commit": "48dbafd39003b9de177b8d314795e45797555850",
+   "sha256": "bc02385c473b7ccfdc2c67697df423feaa394023f5f1d59693c86a5a0dcd7e50",
+   "license": "Apache-2.0"
+  },
+  "supplement": "hallu_harness/benchmarks/halogen_code_imports/data.py: SUPPLEMENT"
+ },
+ "map": {
+  "AFQ": {
+   "projects": [
+    "pyAFQ"
+   ],
+   "source": "pipreqs"
+  },
+  "AG_fft_tools": {
+   "projects": [
+    "agpy"
+   ],
+   "source": "pipreqs"
+  },
+  "ANSI": {
+   "projects": [
+    "pexpect"
+   ],
+   "source": "pipreqs"
+  },
+  "Adafruit": {
+   "projects": [
+    "Adafruit_Libraries"
+   ],
+   "source": "pipreqs"
+  },
+  "App": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "Asterisk": {
+   "projects": [
+    "py_Asterisk"
+   ],
+   "source": "pipreqs"
+  },
+  "BB_jekyll_hook": {
+   "projects": [
+    "bitbucket_jekyll_hook"
+   ],
+   "source": "pipreqs"
+  },
+  "Banzai": {
+   "projects": [
+    "Banzai_NGS"
+   ],
+   "source": "pipreqs"
+  },
+  "BeautifulSoupTests": {
+   "projects": [
+    "BeautifulSoup"
+   ],
+   "source": "pipreqs"
+  },
+  "BioSQL": {
+   "projects": [
+    "biopython"
+   ],
+   "source": "pipreqs"
+  },
+  "BuildbotStatusShields": {
+   "projects": [
+    "BuildbotEightStatusShields"
+   ],
+   "source": "pipreqs"
+  },
+  "ComputedAttribute": {
+   "projects": [
+    "ExtensionClass"
+   ],
+   "source": "pipreqs"
+  },
+  "Crypto": {
+   "projects": [
+    "pycryptodome"
+   ],
+   "source": "pipreqs"
+  },
+  "Cryptodome": {
+   "projects": [
+    "pycryptodomex"
+   ],
+   "source": "pipreqs"
+  },
+  "FSM": {
+   "projects": [
+    "pexpect"
+   ],
+   "source": "pipreqs"
+  },
+  "FiftyOneDegrees": {
+   "projects": [
+    "51degrees_mobile_detector_v3_wrapper"
+   ],
+   "source": "pipreqs"
+  },
+  "GeoBaseMain": {
+   "projects": [
+    "GeoBasesDev"
+   ],
+   "source": "pipreqs"
+  },
+  "GeoBases": {
+   "projects": [
+    "GeoBasesDev"
+   ],
+   "source": "pipreqs"
+  },
+  "Globals": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "HelpSys": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "IPython": {
+   "projects": [
+    "ipython"
+   ],
+   "source": "pipreqs"
+  },
+  "Kittens": {
+   "projects": [
+    "astro_kittens"
+   ],
+   "source": "pipreqs"
+  },
+  "Levenshtein": {
+   "projects": [
+    "python_Levenshtein"
+   ],
+   "source": "pipreqs"
+  },
+  "Lifetime": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "MethodObject": {
+   "projects": [
+    "ExtensionClass"
+   ],
+   "source": "pipreqs"
+  },
+  "MySQLdb": {
+   "projects": [
+    "MySQL-python"
+   ],
+   "source": "pipreqs"
+  },
+  "OFS": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "OpenGL": {
+   "projects": [
+    "PyOpenGL"
+   ],
+   "source": "pipreqs"
+  },
+  "OpenSSL": {
+   "projects": [
+    "pyOpenSSL"
+   ],
+   "source": "pipreqs"
+  },
+  "PIL": {
+   "projects": [
+    "Pillow"
+   ],
+   "source": "pipreqs"
+  },
+  "Products": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "PyWCSTools": {
+   "projects": [
+    "astLib"
+   ],
+   "source": "pipreqs"
+  },
+  "Pyxides": {
+   "projects": [
+    "astro_pyxis"
+   ],
+   "source": "pipreqs"
+  },
+  "QtCore": {
+   "projects": [
+    "PySide"
+   ],
+   "source": "pipreqs"
+  },
+  "RPi": {
+   "projects": [
+    "RPi.GPIO"
+   ],
+   "source": "supplement"
+  },
+  "S3": {
+   "projects": [
+    "s3cmd"
+   ],
+   "source": "pipreqs"
+  },
+  "SCons": {
+   "projects": [
+    "pystick"
+   ],
+   "source": "pipreqs"
+  },
+  "Shared": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "Signals": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "Stemmer": {
+   "projects": [
+    "PyStemmer"
+   ],
+   "source": "pipreqs"
+  },
+  "Testing": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "TopZooTools": {
+   "projects": [
+    "topzootools"
+   ],
+   "source": "pipreqs"
+  },
+  "TreeDisplay": {
+   "projects": [
+    "DocumentTemplate"
+   ],
+   "source": "pipreqs"
+  },
+  "WorkingWithDocumentConversion": {
+   "projects": [
+    "aspose_pdf_java_for_python"
+   ],
+   "source": "pipreqs"
+  },
+  "ZPublisher": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "ZServer": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "ZTUtils": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "aadb": {
+   "projects": [
+    "auto_adjust_display_brightness"
+   ],
+   "source": "pipreqs"
+  },
+  "abakaffe": {
+   "projects": [
+    "abakaffe_cli"
+   ],
+   "source": "pipreqs"
+  },
+  "abiosgaming": {
+   "projects": [
+    "abiosgaming.py"
+   ],
+   "source": "pipreqs"
+  },
+  "abiquo": {
+   "projects": [
+    "abiquo_api"
+   ],
+   "source": "pipreqs"
+  },
+  "abl": {
+   "projects": [
+    "abl.cssprocessor",
+    "abl.robot",
+    "abl.util",
+    "abl.vpath"
+   ],
+   "source": "pipreqs"
+  },
+  "abo": {
+   "projects": [
+    "abo_generator"
+   ],
+   "source": "pipreqs"
+  },
+  "abris_transform": {
+   "projects": [
+    "abris"
+   ],
+   "source": "pipreqs"
+  },
+  "abstract": {
+   "projects": [
+    "abstract.jwrotator"
+   ],
+   "source": "pipreqs"
+  },
+  "abu": {
+   "projects": [
+    "abu.admin"
+   ],
+   "source": "pipreqs"
+  },
+  "ac_flask": {
+   "projects": [
+    "AC_Flask_HipChat"
+   ],
+   "source": "pipreqs"
+  },
+  "acg": {
+   "projects": [
+    "anikom15"
+   ],
+   "source": "pipreqs"
+  },
+  "acme": {
+   "projects": [
+    "acme.dchat",
+    "acme.hello"
+   ],
+   "source": "pipreqs"
+  },
+  "acted": {
+   "projects": [
+    "acted.projects"
+   ],
+   "source": "pipreqs"
+  },
+  "action": {
+   "projects": [
+    "ActionServer"
+   ],
+   "source": "pipreqs"
+  },
+  "actionbar": {
+   "projects": [
+    "actionbar.panel"
+   ],
+   "source": "pipreqs"
+  },
+  "activehomed": {
+   "projects": [
+    "afn"
+   ],
+   "source": "pipreqs"
+  },
+  "activepapers": {
+   "projects": [
+    "ActivePapers.Py"
+   ],
+   "source": "pipreqs"
+  },
+  "adafruit_dht": {
+   "projects": [
+    "adafruit-circuitpython-dht"
+   ],
+   "source": "supplement"
+  },
+  "address_book": {
+   "projects": [
+    "address_book_lansry"
+   ],
+   "source": "pipreqs"
+  },
+  "adi": {
+   "projects": [
+    "adi.commons",
+    "adi.devgen",
+    "adi.fullscreen",
+    "adi.init",
+    "adi.playlist",
+    "adi.samplecontent",
+    "adi.slickstyle",
+    "adi.suite",
+    "adi.trash"
+   ],
+   "source": "pipreqs"
+  },
+  "adict": {
+   "projects": [
+    "aDict2"
+   ],
+   "source": "pipreqs"
+  },
+  "aditam": {
+   "projects": [
+    "aditam.agent",
+    "aditam.core"
+   ],
+   "source": "pipreqs"
+  },
+  "adiumsh": {
+   "projects": [
+    "adium_sh"
+   ],
+   "source": "pipreqs"
+  },
+  "adjector": {
+   "projects": [
+    "AdjectorClient",
+    "AdjectorTracPlugin"
+   ],
+   "source": "pipreqs"
+  },
+  "adkit": {
+   "projects": [
+    "Banner_Ad_Toolkit"
+   ],
+   "source": "pipreqs"
+  },
+  "admin_tools": {
+   "projects": [
+    "django_admin_tools"
+   ],
+   "source": "pipreqs"
+  },
+  "adminishcategories": {
+   "projects": [
+    "adminish_categories"
+   ],
+   "source": "pipreqs"
+  },
+  "adminsortable": {
+   "projects": [
+    "django_admin_sortable"
+   ],
+   "source": "pipreqs"
+  },
+  "adspygoogle": {
+   "projects": [
+    "adspygoogle.adwords"
+   ],
+   "source": "pipreqs"
+  },
+  "advancedcaching": {
+   "projects": [
+    "agtl"
+   ],
+   "source": "pipreqs"
+  },
+  "adytum": {
+   "projects": [
+    "Adytum_PyMonitor"
+   ],
+   "source": "pipreqs"
+  },
+  "affinitic": {
+   "projects": [
+    "affinitic.docpyflakes",
+    "affinitic.recipe.fakezope2eggs",
+    "affinitic.simplecookiecuttr",
+    "affinitic.verifyinterface",
+    "affinitic.zamqp"
+   ],
+   "source": "pipreqs"
+  },
+  "afpy": {
+   "projects": [
+    "afpy.xap"
+   ],
+   "source": "pipreqs"
+  },
+  "agatesql": {
+   "projects": [
+    "agate_sql"
+   ],
+   "source": "pipreqs"
+  },
+  "ageliaco": {
+   "projects": [
+    "ageliaco.recipe.csvconfig"
+   ],
+   "source": "pipreqs"
+  },
+  "agent_http": {
+   "projects": [
+    "agent.http"
+   ],
+   "source": "pipreqs"
+  },
+  "agora": {
+   "projects": [
+    "Agora_Client",
+    "Agora_Fountain",
+    "Agora_Fragment",
+    "Agora_Planner",
+    "Agora_Service_Provider"
+   ],
+   "source": "pipreqs"
+  },
+  "agoraplex": {
+   "projects": [
+    "agoraplex.themes.sphinx"
+   ],
+   "source": "pipreqs"
+  },
+  "agsci": {
+   "projects": [
+    "agsci.blognewsletter"
+   ],
+   "source": "pipreqs"
+  },
+  "agx": {
+   "projects": [
+    "agx.core",
+    "agx.dev",
+    "agx.generator.buildout",
+    "agx.generator.dexterity",
+    "agx.generator.generator",
+    "agx.generator.plone",
+    "agx.generator.pyegg",
+    "agx.generator.sql",
+    "agx.generator.uml",
+    "agx.generator.zca",
+    "agx.transform.uml2fs",
+    "agx.transform.xmi2uml"
+   ],
+   "source": "pipreqs"
+  },
+  "aimes": {
+   "projects": [
+    "aimes.bundle",
+    "aimes.skeleton"
+   ],
+   "source": "pipreqs"
+  },
+  "aio": {
+   "projects": [
+    "aio.app",
+    "aio.config",
+    "aio.core",
+    "aio.signals"
+   ],
+   "source": "pipreqs"
+  },
+  "aiohs2": {
+   "projects": [
+    "aio_hs2"
+   ],
+   "source": "pipreqs"
+  },
+  "aioroutes": {
+   "projects": [
+    "aio_routes"
+   ],
+   "source": "pipreqs"
+  },
+  "aios3": {
+   "projects": [
+    "aio_s3"
+   ],
+   "source": "pipreqs"
+  },
+  "airbrake": {
+   "projects": [
+    "airbrake_flask"
+   ],
+   "source": "pipreqs"
+  },
+  "airflow": {
+   "projects": [
+    "apache-airflow"
+   ],
+   "source": "pipreqs"
+  },
+  "airship": {
+   "projects": [
+    "airship_icloud",
+    "airship_steamcloud"
+   ],
+   "source": "pipreqs"
+  },
+  "akamai": {
+   "projects": [
+    "edgegrid_python"
+   ],
+   "source": "pipreqs"
+  },
+  "alation": {
+   "projects": [
+    "alation_api"
+   ],
+   "source": "pipreqs"
+  },
+  "alba_client": {
+   "projects": [
+    "alba_client_python"
+   ],
+   "source": "pipreqs"
+  },
+  "alburnum": {
+   "projects": [
+    "alburnum_maas_client"
+   ],
+   "source": "pipreqs"
+  },
+  "alchemist": {
+   "projects": [
+    "alchemist.audit",
+    "alchemist.security",
+    "alchemist.traversal",
+    "alchemist.ui"
+   ],
+   "source": "pipreqs"
+  },
+  "alchemyapi": {
+   "projects": [
+    "alchemyapi_python"
+   ],
+   "source": "pipreqs"
+  },
+  "alerta": {
+   "projects": [
+    "alerta_server"
+   ],
+   "source": "pipreqs"
+  },
+  "alexandria_upload": {
+   "projects": [
+    "Alexandria_Upload_Utils"
+   ],
+   "source": "pipreqs"
+  },
+  "alibaba": {
+   "projects": [
+    "alibaba_python_sdk"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyun": {
+   "projects": [
+    "aliyun_python_sdk"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyuncli": {
+   "projects": [
+    "alicloudcli"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkacs": {
+   "projects": [
+    "aliyun_python_sdk_acs"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkbatchcompute": {
+   "projects": [
+    "aliyun_python_sdk_batchcompute"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkbsn": {
+   "projects": [
+    "aliyun_python_sdk_bsn"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkbss": {
+   "projects": [
+    "aliyun_python_sdk_bss"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkcdn": {
+   "projects": [
+    "aliyun_python_sdk_cdn"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkcms": {
+   "projects": [
+    "aliyun_python_sdk_cms"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkcore": {
+   "projects": [
+    "aliyun_python_sdk_core"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkcrm": {
+   "projects": [
+    "aliyun_python_sdk_crm"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkcs": {
+   "projects": [
+    "aliyun_python_sdk_cs"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkdrds": {
+   "projects": [
+    "aliyun_python_sdk_drds"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkecs": {
+   "projects": [
+    "aliyun_python_sdk_ecs"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkess": {
+   "projects": [
+    "aliyun_python_sdk_ess"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkft": {
+   "projects": [
+    "aliyun_python_sdk_ft"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkmts": {
+   "projects": [
+    "aliyun_python_sdk_mts"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkocs": {
+   "projects": [
+    "aliyun_python_sdk_ocs"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkoms": {
+   "projects": [
+    "aliyun_python_sdk_oms"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkossadmin": {
+   "projects": [
+    "aliyun_python_sdk_ossadmin"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkr-kvstore": {
+   "projects": [
+    "aliyun_python_sdk_r_kvstore"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkram": {
+   "projects": [
+    "aliyun_python_sdk_ram"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkrds": {
+   "projects": [
+    "aliyun_python_sdk_rds"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkrisk": {
+   "projects": [
+    "aliyun_python_sdk_risk"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkros": {
+   "projects": [
+    "aliyun_python_sdk_ros"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkslb": {
+   "projects": [
+    "aliyun_python_sdk_slb"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdksts": {
+   "projects": [
+    "aliyun_python_sdk_sts"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkubsms": {
+   "projects": [
+    "aliyun_python_sdk_ubsms"
+   ],
+   "source": "pipreqs"
+  },
+  "aliyunsdkyundun": {
+   "projects": [
+    "aliyun_python_sdk_yundun"
+   ],
+   "source": "pipreqs"
+  },
+  "allattachments": {
+   "projects": [
+    "AllAttachmentsMacro"
+   ],
+   "source": "pipreqs"
+  },
+  "allocine": {
+   "projects": [
+    "allocine_wrapper"
+   ],
+   "source": "pipreqs"
+  },
+  "allowedsites": {
+   "projects": [
+    "django_allowedsites"
+   ],
+   "source": "pipreqs"
+  },
+  "alm": {
+   "projects": [
+    "alm.solrindex"
+   ],
+   "source": "pipreqs"
+  },
+  "aloft": {
+   "projects": [
+    "aloft.py"
+   ],
+   "source": "pipreqs"
+  },
+  "alpacalib": {
+   "projects": [
+    "alpaca"
+   ],
+   "source": "pipreqs"
+  },
+  "alphabetic": {
+   "projects": [
+    "alphabetic_simple"
+   ],
+   "source": "pipreqs"
+  },
+  "alphasms": {
+   "projects": [
+    "alphasms_client"
+   ],
+   "source": "pipreqs"
+  },
+  "altered": {
+   "projects": [
+    "altered.states"
+   ],
+   "source": "pipreqs"
+  },
+  "alterootheme": {
+   "projects": [
+    "alterootheme.busycity",
+    "alterootheme.intensesimplicity",
+    "alterootheme.lazydays"
+   ],
+   "source": "pipreqs"
+  },
+  "alurinium": {
+   "projects": [
+    "alurinium_image_processing"
+   ],
+   "source": "pipreqs"
+  },
+  "alxlib": {
+   "projects": [
+    "alx"
+   ],
+   "source": "pipreqs"
+  },
+  "amara3": {
+   "projects": [
+    "amara3_iri",
+    "amara3_xml"
+   ],
+   "source": "pipreqs"
+  },
+  "amazon": {
+   "projects": [
+    "AmazonAPIWrapper",
+    "python_amazon_simple_product_api"
+   ],
+   "source": "pipreqs"
+  },
+  "ambikesh1349-1": {
+   "projects": [
+    "ambikesh1349_1"
+   ],
+   "source": "pipreqs"
+  },
+  "ambilight": {
+   "projects": [
+    "AmbilightParty"
+   ],
+   "source": "pipreqs"
+  },
+  "amifs": {
+   "projects": [
+    "amifs_core"
+   ],
+   "source": "pipreqs"
+  },
+  "amiorganizer": {
+   "projects": [
+    "ami_organizer"
+   ],
+   "source": "pipreqs"
+  },
+  "amitu": {
+   "projects": [
+    "amitu.lipy",
+    "amitu_putils",
+    "amitu_websocket_client",
+    "amitu_zutils"
+   ],
+   "source": "pipreqs"
+  },
+  "amltlearn": {
+   "projects": [
+    "AMLT_learn"
+   ],
+   "source": "pipreqs"
+  },
+  "amocrm": {
+   "projects": [
+    "amocrm_api"
+   ],
+   "source": "pipreqs"
+  },
+  "amqpdispatcher": {
+   "projects": [
+    "amqp_dispatcher"
+   ],
+   "source": "pipreqs"
+  },
+  "amqpstorm": {
+   "projects": [
+    "AMQP_Storm"
+   ],
+   "source": "pipreqs"
+  },
+  "analytics": {
+   "projects": [
+    "analytics_python"
+   ],
+   "source": "pipreqs"
+  },
+  "analyzedir": {
+   "projects": [
+    "AnalyzeDirectory"
+   ],
+   "source": "pipreqs"
+  },
+  "ancientsolutions": {
+   "projects": [
+    "ancientsolutions_crypttools"
+   ],
+   "source": "pipreqs"
+  },
+  "anderson_paginator": {
+   "projects": [
+    "anderson.paginator"
+   ],
+   "source": "pipreqs"
+  },
+  "android_clean_app": {
+   "projects": [
+    "android_resource_remover"
+   ],
+   "source": "pipreqs"
+  },
+  "anel_power_control": {
+   "projects": [
+    "AnelPowerControl"
+   ],
+   "source": "pipreqs"
+  },
+  "angus": {
+   "projects": [
+    "angus_sdk_python"
+   ],
+   "source": "pipreqs"
+  },
+  "annalist_root": {
+   "projects": [
+    "Annalist"
+   ],
+   "source": "pipreqs"
+  },
+  "annogesiclib": {
+   "projects": [
+    "ANNOgesic"
+   ],
+   "source": "pipreqs"
+  },
+  "ansible-role-apply": {
+   "projects": [
+    "ansible_role_apply"
+   ],
+   "source": "pipreqs"
+  },
+  "ansibledebugger": {
+   "projects": [
+    "ansible_playbook_debugger"
+   ],
+   "source": "pipreqs"
+  },
+  "ansibledocgen": {
+   "projects": [
+    "ansible_docgen"
+   ],
+   "source": "pipreqs"
+  },
+  "ansibleflow": {
+   "projects": [
+    "ansible_flow"
+   ],
+   "source": "pipreqs"
+  },
+  "ansibleinventorygrapher": {
+   "projects": [
+    "ansible_inventory_grapher"
+   ],
+   "source": "pipreqs"
+  },
+  "ansiblelint": {
+   "projects": [
+    "ansible_lint"
+   ],
+   "source": "pipreqs"
+  },
+  "ansiblerolesgraph": {
+   "projects": [
+    "ansible_roles_graph"
+   ],
+   "source": "pipreqs"
+  },
+  "ansibletools": {
+   "projects": [
+    "ansible_tools"
+   ],
+   "source": "pipreqs"
+  },
+  "anthill": {
+   "projects": [
+    "anthill.exampletheme",
+    "anthill.skinner",
+    "anthill.tal.macrorenderer"
+   ],
+   "source": "pipreqs"
+  },
+  "anthrax": {
+   "projects": [
+    "AnthraxDojoFrontend",
+    "AnthraxHTMLInput",
+    "AnthraxImage"
+   ],
+   "source": "pipreqs"
+  },
+  "antisphinx": {
+   "projects": [
+    "antiweb"
+   ],
+   "source": "pipreqs"
+  },
+  "antispoofing": {
+   "projects": [
+    "antispoofing.evaluation"
+   ],
+   "source": "pipreqs"
+  },
+  "antlr4": {
+   "projects": [
+    "antlr4_python2_runtime",
+    "antlr4_python3_runtime",
+    "antlr4_python_alt"
+   ],
+   "source": "pipreqs"
+  },
+  "anybox": {
+   "projects": [
+    "anybox.buildbot.openerp",
+    "anybox.nose.odoo",
+    "anybox.paster.odoo",
+    "anybox.paster.openerp",
+    "anybox.recipe.sysdeps",
+    "anybox.scripts.odoo"
+   ],
+   "source": "pipreqs"
+  },
+  "apiclient": {
+   "projects": [
+    "google_api_python_client"
+   ],
+   "source": "pipreqs"
+  },
+  "apitools": {
+   "projects": [
+    "google_apitools"
+   ],
+   "source": "pipreqs"
+  },
+  "apm": {
+   "projects": [
+    "arpm"
+   ],
+   "source": "pipreqs"
+  },
+  "app_data": {
+   "projects": [
+    "django_appdata"
+   ],
+   "source": "pipreqs"
+  },
+  "appconf": {
+   "projects": [
+    "django_appconf"
+   ],
+   "source": "pipreqs"
+  },
+  "appd": {
+   "projects": [
+    "AppDynamicsDownloader",
+    "AppDynamicsREST"
+   ],
+   "source": "pipreqs"
+  },
+  "appdynamics_bindeps": {
+   "projects": [
+    "appdynamics_bindeps_linux_x64",
+    "appdynamics_bindeps_linux_x86",
+    "appdynamics_bindeps_osx_x64"
+   ],
+   "source": "pipreqs"
+  },
+  "appdynamics_proxysupport": {
+   "projects": [
+    "appdynamics_proxysupport_linux_x64",
+    "appdynamics_proxysupport_linux_x86",
+    "appdynamics_proxysupport_osx_x64"
+   ],
+   "source": "pipreqs"
+  },
+  "appium": {
+   "projects": [
+    "Appium_Python_Client"
+   ],
+   "source": "pipreqs"
+  },
+  "appliapps": {
+   "projects": [
+    "applibase"
+   ],
+   "source": "pipreqs"
+  },
+  "appserver": {
+   "projects": [
+    "broadwick"
+   ],
+   "source": "pipreqs"
+  },
+  "archetypes": {
+   "projects": [
+    "archetypes.kss",
+    "archetypes.multilingual",
+    "archetypes.schemaextender"
+   ],
+   "source": "pipreqs"
+  },
+  "arm": {
+   "projects": [
+    "ansible_role_manager"
+   ],
+   "source": "pipreqs"
+  },
+  "armor": {
+   "projects": [
+    "armor_api"
+   ],
+   "source": "pipreqs"
+  },
+  "armstrong": {
+   "projects": [
+    "armstrong.apps.related_content",
+    "armstrong.apps.series",
+    "armstrong.cli",
+    "armstrong.core.arm_access",
+    "armstrong.core.arm_layout",
+    "armstrong.core.arm_sections",
+    "armstrong.core.arm_wells",
+    "armstrong.dev",
+    "armstrong.esi",
+    "armstrong.hatband",
+    "armstrong.templates.standard",
+    "armstrong.utils.backends",
+    "armstrong.utils.celery"
+   ],
+   "source": "pipreqs"
+  },
+  "arstecnica": {
+   "projects": [
+    "arstecnica.raccoon.autobahn",
+    "arstecnica.sqlalchemy.async"
+   ],
+   "source": "pipreqs"
+  },
+  "article-downloader": {
+   "projects": [
+    "article_downloader"
+   ],
+   "source": "pipreqs"
+  },
+  "artifactcli": {
+   "projects": [
+    "artifact_cli"
+   ],
+   "source": "pipreqs"
+  },
+  "arvados": {
+   "projects": [
+    "arvados_python_client"
+   ],
+   "source": "pipreqs"
+  },
+  "arvados_cwl": {
+   "projects": [
+    "arvados_cwl_runner"
+   ],
+   "source": "pipreqs"
+  },
+  "arvnodeman": {
+   "projects": [
+    "arvados_node_manager"
+   ],
+   "source": "pipreqs"
+  },
+  "asana_to_github": {
+   "projects": [
+    "AsanaToGithub"
+   ],
+   "source": "pipreqs"
+  },
+  "asciibinary": {
+   "projects": [
+    "AsciiBinaryConverter"
+   ],
+   "source": "pipreqs"
+  },
+  "asd": {
+   "projects": [
+    "AdvancedSearchDiscovery"
+   ],
+   "source": "pipreqs"
+  },
+  "askbot": {
+   "projects": [
+    "askbot_tuan",
+    "askbot_tuanpa"
+   ],
+   "source": "pipreqs"
+  },
+  "asnhistory": {
+   "projects": [
+    "asnhistory_redis"
+   ],
+   "source": "pipreqs"
+  },
+  "aspen_jinja2_renderer": {
+   "projects": [
+    "aspen_jinja2"
+   ],
+   "source": "pipreqs"
+  },
+  "aspen_tornado_engine": {
+   "projects": [
+    "aspen_tornado"
+   ],
+   "source": "pipreqs"
+  },
+  "asprise_ocr_api": {
+   "projects": [
+    "asprise_ocr_sdk_python_api"
+   ],
+   "source": "pipreqs"
+  },
+  "aspy": {
+   "projects": [
+    "aspy.refactor_imports",
+    "aspy.yaml"
+   ],
+   "source": "pipreqs"
+  },
+  "asterisk": {
+   "projects": [
+    "asterisk_ami"
+   ],
+   "source": "pipreqs"
+  },
+  "asts": {
+   "projects": [
+    "add_asts"
+   ],
+   "source": "pipreqs"
+  },
+  "asymmetricbase": {
+   "projects": [
+    "asymmetricbase.enum",
+    "asymmetricbase.fields",
+    "asymmetricbase.logging",
+    "asymmetricbase.utils"
+   ],
+   "source": "pipreqs"
+  },
+  "asyncirc": {
+   "projects": [
+    "asyncio_irc"
+   ],
+   "source": "pipreqs"
+  },
+  "asyncmongoorm": {
+   "projects": [
+    "asyncmongoorm_je"
+   ],
+   "source": "pipreqs"
+  },
+  "asyncssh": {
+   "projects": [
+    "asyncssh_unofficial"
+   ],
+   "source": "pipreqs"
+  },
+  "athletelist": {
+   "projects": [
+    "athletelistyy"
+   ],
+   "source": "pipreqs"
+  },
+  "atm": {
+   "projects": [
+    "automium"
+   ],
+   "source": "pipreqs"
+  },
+  "atmosphere": {
+   "projects": [
+    "atmosphere_python_client"
+   ],
+   "source": "pipreqs"
+  },
+  "atom": {
+   "projects": [
+    "gdata"
+   ],
+   "source": "pipreqs"
+  },
+  "atomic": {
+   "projects": [
+    "AtomicWrite"
+   ],
+   "source": "pipreqs"
+  },
+  "atomisator": {
+   "projects": [
+    "atomisator.db",
+    "atomisator.enhancers",
+    "atomisator.feed",
+    "atomisator.indexer",
+    "atomisator.outputs",
+    "atomisator.parser",
+    "atomisator.readers"
+   ],
+   "source": "pipreqs"
+  },
+  "atreal": {
+   "projects": [
+    "atreal.cmfeditions.unlocker",
+    "atreal.filestorage.common",
+    "atreal.layouts",
+    "atreal.mailservices",
+    "atreal.massloader",
+    "atreal.monkeyplone",
+    "atreal.override.albumview",
+    "atreal.richfile.preview",
+    "atreal.richfile.qualifier",
+    "atreal.usersinout"
+   ],
+   "source": "pipreqs"
+  },
+  "atsim": {
+   "projects": [
+    "atsim.potentials"
+   ],
+   "source": "pipreqs"
+  },
+  "attractsdk": {
+   "projects": [
+    "attract_sdk"
+   ],
+   "source": "pipreqs"
+  },
+  "audio": {
+   "projects": [
+    "audio.bitstream",
+    "audio.coders",
+    "audio.filters",
+    "audio.fourier",
+    "audio.frames",
+    "audio.lp",
+    "audio.psychoacoustics",
+    "audio.quantizers",
+    "audio.shrink",
+    "audio.wave"
+   ],
+   "source": "pipreqs"
+  },
+  "aufrefer": {
+   "projects": [
+    "auf_refer"
+   ],
+   "source": "pipreqs"
+  },
+  "auslfe": {
+   "projects": [
+    "auslfe.formonline.content"
+   ],
+   "source": "pipreqs"
+  },
+  "auspost": {
+   "projects": [
+    "auspost_apis"
+   ],
+   "source": "pipreqs"
+  },
+  "auth0": {
+   "projects": [
+    "auth0_python"
+   ],
+   "source": "pipreqs"
+  },
+  "auth_server_client": {
+   "projects": [
+    "AuthServerClient"
+   ],
+   "source": "pipreqs"
+  },
+  "authorize": {
+   "projects": [
+    "AuthorizeSauce"
+   ],
+   "source": "pipreqs"
+  },
+  "authzpolicy": {
+   "projects": [
+    "AuthzPolicyPlugin"
+   ],
+   "source": "pipreqs"
+  },
+  "autobahn": {
+   "projects": [
+    "autobahn_rce"
+   ],
+   "source": "pipreqs"
+  },
+  "avatar": {
+   "projects": [
+    "geonode_avatar"
+   ],
+   "source": "pipreqs"
+  },
+  "awebview": {
+   "projects": [
+    "android_webview"
+   ],
+   "source": "pipreqs"
+  },
+  "aws_cdk": {
+   "projects": [
+    "aws-cdk-lib"
+   ],
+   "source": "supplement"
+  },
+  "azure": {
+   "projects": [
+    "azure_common",
+    "azure_mgmt_common",
+    "azure_mgmt_compute",
+    "azure_mgmt_network",
+    "azure_mgmt_nspkg",
+    "azure_mgmt_resource",
+    "azure_mgmt_storage",
+    "azure_nspkg",
+    "azure_servicebus",
+    "azure_servicemanagement_legacy",
+    "azure_storage"
+   ],
+   "source": "pipreqs"
+  },
+  "b2gcommands": {
+   "projects": [
+    "b2g_commands"
+   ],
+   "source": "pipreqs"
+  },
+  "b2gperf": {
+   "projects": [
+    "b2gperf_v1.3",
+    "b2gperf_v1.4",
+    "b2gperf_v2.0",
+    "b2gperf_v2.1",
+    "b2gperf_v2.2"
+   ],
+   "source": "pipreqs"
+  },
+  "b2gpopulate": {
+   "projects": [
+    "b2gpopulate_v1.3",
+    "b2gpopulate_v1.4",
+    "b2gpopulate_v2.0",
+    "b2gpopulate_v2.1",
+    "b2gpopulate_v2.2"
+   ],
+   "source": "pipreqs"
+  },
+  "b3j0f": {
+   "projects": [
+    "b3j0f.annotation",
+    "b3j0f.aop",
+    "b3j0f.conf",
+    "b3j0f.sync",
+    "b3j0f.utils"
+   ],
+   "source": "pipreqs"
+  },
+  "babel": {
+   "projects": [
+    "Babel"
+   ],
+   "source": "pipreqs"
+  },
+  "babelglade": {
+   "projects": [
+    "BabelGladeExtractor"
+   ],
+   "source": "pipreqs"
+  },
+  "backplane": {
+   "projects": [
+    "backplane2_pyclient"
+   ],
+   "source": "pipreqs"
+  },
+  "backport_abcoll": {
+   "projects": [
+    "backport_collections"
+   ],
+   "source": "pipreqs"
+  },
+  "backports": {
+   "projects": [
+    "backports.functools_lru_cache",
+    "backports.inspect",
+    "backports.pbkdf2",
+    "backports.shutil_get_terminal_size",
+    "backports.socketpair",
+    "backports.ssl",
+    "backports.ssl_match_hostname",
+    "backports.statistics"
+   ],
+   "source": "pipreqs"
+  },
+  "badgekit": {
+   "projects": [
+    "badgekit_api_client"
+   ],
+   "source": "pipreqs"
+  },
+  "badlinks": {
+   "projects": [
+    "BadLinksPlugin"
+   ],
+   "source": "pipreqs"
+  },
+  "bael": {
+   "projects": [
+    "bael.project"
+   ],
+   "source": "pipreqs"
+  },
+  "baidu": {
+   "projects": [
+    "baidupy"
+   ],
+   "source": "pipreqs"
+  },
+  "balrog": {
+   "projects": [
+    "buildtools"
+   ],
+   "source": "pipreqs"
+  },
+  "baluhn": {
+   "projects": [
+    "baluhn_redux"
+   ],
+   "source": "pipreqs"
+  },
+  "bamboo": {
+   "projects": [
+    "bamboo.pantrybell",
+    "bamboo.scaffold",
+    "bamboo.setuptools_version",
+    "bamboo_data",
+    "bamboo_server"
+   ],
+   "source": "pipreqs"
+  },
+  "bambu": {
+   "projects": [
+    "bambu_codemirror",
+    "bambu_dataportability",
+    "bambu_enqueue",
+    "bambu_faq",
+    "bambu_ffmpeg",
+    "bambu_grids",
+    "bambu_international",
+    "bambu_jwplayer",
+    "bambu_minidetect",
+    "bambu_navigation",
+    "bambu_notifications",
+    "bambu_payments",
+    "bambu_pusher",
+    "bambu_saas",
+    "bambu_sites"
+   ],
+   "source": "pipreqs"
+  },
+  "banana": {
+   "projects": [
+    "Bananas",
+    "banana.maya"
+   ],
+   "source": "pipreqs"
+  },
+  "bang": {
+   "projects": [
+    "bangtext"
+   ],
+   "source": "pipreqs"
+  },
+  "barcode": {
+   "projects": [
+    "barcode_generator"
+   ],
+   "source": "pipreqs"
+  },
+  "bark": {
+   "projects": [
+    "bark_ssg"
+   ],
+   "source": "pipreqs"
+  },
+  "barking_owl": {
+   "projects": [
+    "BarkingOwl"
+   ],
+   "source": "pipreqs"
+  },
+  "bart": {
+   "projects": [
+    "bart_py"
+   ],
+   "source": "pipreqs"
+  },
+  "basalt": {
+   "projects": [
+    "basalt_tasks"
+   ],
+   "source": "pipreqs"
+  },
+  "base62": {
+   "projects": [
+    "base_62"
+   ],
+   "source": "pipreqs"
+  },
+  "basemap": {
+   "projects": [
+    "basemap_Jim"
+   ],
+   "source": "pipreqs"
+  },
+  "bash": {
+   "projects": [
+    "bash_toolbelt"
+   ],
+   "source": "pipreqs"
+  },
+  "bashutils": {
+   "projects": [
+    "Python_Bash_Utils"
+   ],
+   "source": "pipreqs"
+  },
+  "basic_http": {
+   "projects": [
+    "BasicHttp"
+   ],
+   "source": "pipreqs"
+  },
+  "basil": {
+   "projects": [
+    "basil_daq"
+   ],
+   "source": "pipreqs"
+  },
+  "batchapps": {
+   "projects": [
+    "azure_batch_apps"
+   ],
+   "source": "pipreqs"
+  },
+  "bcrypt": {
+   "projects": [
+    "python_bcrypt"
+   ],
+   "source": "pipreqs"
+  },
+  "beaker": {
+   "projects": [
+    "Beaker"
+   ],
+   "source": "pipreqs"
+  },
+  "beetsplug": {
+   "projects": [
+    "beets"
+   ],
+   "source": "pipreqs"
+  },
+  "begin": {
+   "projects": [
+    "begins"
+   ],
+   "source": "pipreqs"
+  },
+  "benchit": {
+   "projects": [
+    "bench_it"
+   ],
+   "source": "pipreqs"
+  },
+  "beproud": {
+   "projects": [
+    "beproud.utils"
+   ],
+   "source": "pipreqs"
+  },
+  "bfillings": {
+   "projects": [
+    "burrito_fillings"
+   ],
+   "source": "pipreqs"
+  },
+  "bigjob": {
+   "projects": [
+    "BigJob"
+   ],
+   "source": "pipreqs"
+  },
+  "billboard": {
+   "projects": [
+    "billboard.py"
+   ],
+   "source": "pipreqs"
+  },
+  "binstar_build_client": {
+   "projects": [
+    "anaconda_build"
+   ],
+   "source": "pipreqs"
+  },
+  "binstar_client": {
+   "projects": [
+    "anaconda_client"
+   ],
+   "source": "pipreqs"
+  },
+  "biocommons": {
+   "projects": [
+    "biocommons.dev"
+   ],
+   "source": "pipreqs"
+  },
+  "birdhousebuilder": {
+   "projects": [
+    "birdhousebuilder.recipe.conda",
+    "birdhousebuilder.recipe.docker",
+    "birdhousebuilder.recipe.redis",
+    "birdhousebuilder.recipe.supervisor"
+   ],
+   "source": "pipreqs"
+  },
+  "blender26-meshio": {
+   "projects": [
+    "pymeshio"
+   ],
+   "source": "pipreqs"
+  },
+  "board": {
+   "projects": [
+    "adafruit-blinka"
+   ],
+   "source": "supplement"
+  },
+  "bootstrap": {
+   "projects": [
+    "BigJob"
+   ],
+   "source": "pipreqs"
+  },
+  "borg": {
+   "projects": [
+    "borg.localrole"
+   ],
+   "source": "pipreqs"
+  },
+  "bow": {
+   "projects": [
+    "bagofwords"
+   ],
+   "source": "pipreqs"
+  },
+  "bpdb": {
+   "projects": [
+    "bpython"
+   ],
+   "source": "pipreqs"
+  },
+  "bqapi": {
+   "projects": [
+    "bisque_api"
+   ],
+   "source": "pipreqs"
+  },
+  "braces": {
+   "projects": [
+    "django_braces"
+   ],
+   "source": "pipreqs"
+  },
+  "briefscaster": {
+   "projects": [
+    "briefs_caster"
+   ],
+   "source": "pipreqs"
+  },
+  "brisa_media_server/plugins": {
+   "projects": [
+    "brisa_media_server_plugins"
+   ],
+   "source": "pipreqs"
+  },
+  "brkt_requests": {
+   "projects": [
+    "brkt_sdk"
+   ],
+   "source": "pipreqs"
+  },
+  "broadcastlogging": {
+   "projects": [
+    "broadcast_logging"
+   ],
+   "source": "pipreqs"
+  },
+  "brocadetool": {
+   "projects": [
+    "brocade_tool"
+   ],
+   "source": "pipreqs"
+  },
+  "bronto": {
+   "projects": [
+    "bronto_python"
+   ],
+   "source": "pipreqs"
+  },
+  "brownie": {
+   "projects": [
+    "Brownie"
+   ],
+   "source": "pipreqs"
+  },
+  "browsermobproxy": {
+   "projects": [
+    "browsermob_proxy"
+   ],
+   "source": "pipreqs"
+  },
+  "brubeckmysql": {
+   "projects": [
+    "brubeck_mysql"
+   ],
+   "source": "pipreqs"
+  },
+  "brubeckoauth": {
+   "projects": [
+    "brubeck_oauth"
+   ],
+   "source": "pipreqs"
+  },
+  "brubeckservice": {
+   "projects": [
+    "brubeck_service"
+   ],
+   "source": "pipreqs"
+  },
+  "brubeckuploader": {
+   "projects": [
+    "brubeck_uploader"
+   ],
+   "source": "pipreqs"
+  },
+  "bs4": {
+   "projects": [
+    "beautifulsoup4"
+   ],
+   "source": "pipreqs"
+  },
+  "bson": {
+   "projects": [
+    "pymongo"
+   ],
+   "source": "pipreqs"
+  },
+  "bst": {
+   "projects": [
+    "bst.pygasus.core",
+    "bst.pygasus.datamanager",
+    "bst.pygasus.demo",
+    "bst.pygasus.i18n",
+    "bst.pygasus.resources",
+    "bst.pygasus.scaffolding",
+    "bst.pygasus.security",
+    "bst.pygasus.session",
+    "bst.pygasus.wsgi"
+   ],
+   "source": "pipreqs"
+  },
+  "btable": {
+   "projects": [
+    "btable_py"
+   ],
+   "source": "pipreqs"
+  },
+  "btapi": {
+   "projects": [
+    "bananatag_api"
+   ],
+   "source": "pipreqs"
+  },
+  "btceapi": {
+   "projects": [
+    "btce_api"
+   ],
+   "source": "pipreqs"
+  },
+  "btcebot": {
+   "projects": [
+    "btce_bot"
+   ],
+   "source": "pipreqs"
+  },
+  "btsync": {
+   "projects": [
+    "btsync.py"
+   ],
+   "source": "pipreqs"
+  },
+  "buck": {
+   "projects": [
+    "buck.pprint"
+   ],
+   "source": "pipreqs"
+  },
+  "bud": {
+   "projects": [
+    "bud.nospam"
+   ],
+   "source": "pipreqs"
+  },
+  "budy": {
+   "projects": [
+    "budy_api"
+   ],
+   "source": "pipreqs"
+  },
+  "buffer": {
+   "projects": [
+    "buffer_alpaca"
+   ],
+   "source": "pipreqs"
+  },
+  "buggd": {
+   "projects": [
+    "bug.gd"
+   ],
+   "source": "pipreqs"
+  },
+  "bugle": {
+   "projects": [
+    "bugle_sites"
+   ],
+   "source": "pipreqs"
+  },
+  "bugspots": {
+   "projects": [
+    "bug_spots"
+   ],
+   "source": "pipreqs"
+  },
+  "bugzilla": {
+   "projects": [
+    "python_bugzilla"
+   ],
+   "source": "pipreqs"
+  },
+  "bugzscout": {
+   "projects": [
+    "bugzscout_py"
+   ],
+   "source": "pipreqs"
+  },
+  "buildTools": {
+   "projects": [
+    "ajk_ios_buildTools"
+   ],
+   "source": "pipreqs"
+  },
+  "buildnotifylib": {
+   "projects": [
+    "BuildNotify"
+   ],
+   "source": "pipreqs"
+  },
+  "buildout": {
+   "projects": [
+    "buildout.bootstrap",
+    "buildout.disablessl",
+    "buildout.dumppickedversions",
+    "buildout.dumppickedversions2",
+    "buildout.dumprequirements",
+    "buildout.eggnest",
+    "buildout.eggscleaner",
+    "buildout.eggsdirectories",
+    "buildout.eggtractor",
+    "buildout.extensionscripts",
+    "buildout.locallib",
+    "buildout.packagename",
+    "buildout.recipe.isolation",
+    "buildout.removeaddledeggs",
+    "buildout.requirements",
+    "buildout.sanitycheck",
+    "buildout.sendpickedversions",
+    "buildout.threatlevel",
+    "buildout.umask",
+    "buildout.variables"
+   ],
+   "source": "pipreqs"
+  },
+  "buildslave": {
+   "projects": [
+    "buildbot_slave"
+   ],
+   "source": "pipreqs"
+  },
+  "builtins": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "bumper": {
+   "projects": [
+    "bumper_lib"
+   ],
+   "source": "pipreqs"
+  },
+  "bumple": {
+   "projects": [
+    "bumple_downloader"
+   ],
+   "source": "pipreqs"
+  },
+  "bundesliga": {
+   "projects": [
+    "bundesliga_cli"
+   ],
+   "source": "pipreqs"
+  },
+  "bundlemaker": {
+   "projects": [
+    "bundlemanager"
+   ],
+   "source": "pipreqs"
+  },
+  "burpui": {
+   "projects": [
+    "burp_ui"
+   ],
+   "source": "pipreqs"
+  },
+  "busio": {
+   "projects": [
+    "adafruit-blinka"
+   ],
+   "source": "supplement"
+  },
+  "busyflow": {
+   "projects": [
+    "busyflow.pivotal"
+   ],
+   "source": "pipreqs"
+  },
+  "buttercms-django": {
+   "projects": [
+    "buttercms_django"
+   ],
+   "source": "pipreqs"
+  },
+  "buzz": {
+   "projects": [
+    "buzz_python_client"
+   ],
+   "source": "pipreqs"
+  },
+  "bvc": {
+   "projects": [
+    "buildout_versions_checker"
+   ],
+   "source": "pipreqs"
+  },
+  "bvggrabber": {
+   "projects": [
+    "bvg_grabber"
+   ],
+   "source": "pipreqs"
+  },
+  "byond": {
+   "projects": [
+    "BYONDTools"
+   ],
+   "source": "pipreqs"
+  },
+  "bzETL": {
+   "projects": [
+    "Bugzilla_ETL"
+   ],
+   "source": "pipreqs"
+  },
+  "bzlib": {
+   "projects": [
+    "bugzillatools"
+   ],
+   "source": "pipreqs"
+  },
+  "bzrlib": {
+   "projects": [
+    "bzr",
+    "bzr_automirror",
+    "bzr_bash_completion",
+    "bzr_colo",
+    "bzr_killtrailing",
+    "bzr_pqm"
+   ],
+   "source": "pipreqs"
+  },
+  "c2c": {
+   "projects": [
+    "c2c.cssmin",
+    "c2c.recipe.closurecompile",
+    "c2c.recipe.cssmin",
+    "c2c.recipe.jarfile",
+    "c2c.recipe.msgfmt",
+    "c2c.recipe.pkgversions",
+    "c2c.sqlalchemy.rest",
+    "c2c.versions"
+   ],
+   "source": "pipreqs"
+  },
+  "c2c_recipe_facts": {
+   "projects": [
+    "c2c.recipe.facts"
+   ],
+   "source": "pipreqs"
+  },
+  "cabalgata": {
+   "projects": [
+    "cabalgata_silla_de_montar",
+    "cabalgata_zookeeper"
+   ],
+   "source": "pipreqs"
+  },
+  "cache_utils": {
+   "projects": [
+    "django_cache_utils"
+   ],
+   "source": "pipreqs"
+  },
+  "captcha": {
+   "projects": [
+    "django_recaptcha"
+   ],
+   "source": "pipreqs"
+  },
+  "cartridge": {
+   "projects": [
+    "Cartridge"
+   ],
+   "source": "pipreqs"
+  },
+  "cassandra": {
+   "projects": [
+    "cassandra_driver"
+   ],
+   "source": "pipreqs"
+  },
+  "cassandralauncher": {
+   "projects": [
+    "CassandraLauncher"
+   ],
+   "source": "pipreqs"
+  },
+  "cc42": {
+   "projects": [
+    "42qucc"
+   ],
+   "source": "pipreqs"
+  },
+  "cerberus": {
+   "projects": [
+    "Cerberus"
+   ],
+   "source": "pipreqs"
+  },
+  "cfnlint": {
+   "projects": [
+    "cfn-lint"
+   ],
+   "source": "pipreqs"
+  },
+  "chameleon": {
+   "projects": [
+    "Chameleon"
+   ],
+   "source": "pipreqs"
+  },
+  "charmtools": {
+   "projects": [
+    "charm_tools"
+   ],
+   "source": "pipreqs"
+  },
+  "chef": {
+   "projects": [
+    "PyChef"
+   ],
+   "source": "pipreqs"
+  },
+  "chip8": {
+   "projects": [
+    "c8d"
+   ],
+   "source": "pipreqs"
+  },
+  "cjson": {
+   "projects": [
+    "python_cjson"
+   ],
+   "source": "pipreqs"
+  },
+  "classytags": {
+   "projects": [
+    "django_classy_tags"
+   ],
+   "source": "pipreqs"
+  },
+  "cloghandler": {
+   "projects": [
+    "ConcurrentLogHandler"
+   ],
+   "source": "pipreqs"
+  },
+  "clonevirtualenv": {
+   "projects": [
+    "virtualenv_clone"
+   ],
+   "source": "pipreqs"
+  },
+  "cloud-insight": {
+   "projects": [
+    "al_cloudinsight"
+   ],
+   "source": "pipreqs"
+  },
+  "cloud_admin": {
+   "projects": [
+    "adminapi"
+   ],
+   "source": "pipreqs"
+  },
+  "cloudservers": {
+   "projects": [
+    "python_cloudservers"
+   ],
+   "source": "pipreqs"
+  },
+  "clusterconsole": {
+   "projects": [
+    "cerebrod"
+   ],
+   "source": "pipreqs"
+  },
+  "clustersitter": {
+   "projects": [
+    "cerebrod"
+   ],
+   "source": "pipreqs"
+  },
+  "cms": {
+   "projects": [
+    "django_cms"
+   ],
+   "source": "pipreqs"
+  },
+  "colander": {
+   "projects": [
+    "ba_colander"
+   ],
+   "source": "pipreqs"
+  },
+  "colors": {
+   "projects": [
+    "ansicolors"
+   ],
+   "source": "pipreqs"
+  },
+  "compile": {
+   "projects": [
+    "bf_lc3"
+   ],
+   "source": "pipreqs"
+  },
+  "compose": {
+   "projects": [
+    "docker_compose"
+   ],
+   "source": "pipreqs"
+  },
+  "compressor": {
+   "projects": [
+    "django_compressor"
+   ],
+   "source": "pipreqs"
+  },
+  "concurrent": {
+   "projects": [
+    "futures"
+   ],
+   "source": "pipreqs"
+  },
+  "configargparse": {
+   "projects": [
+    "ConfigArgParse"
+   ],
+   "source": "pipreqs"
+  },
+  "configparser": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "constraint": {
+   "projects": [
+    "python-constraint"
+   ],
+   "source": "pipreqs"
+  },
+  "contracts": {
+   "projects": [
+    "PyContracts"
+   ],
+   "source": "pipreqs"
+  },
+  "coordination": {
+   "projects": [
+    "BigJob"
+   ],
+   "source": "pipreqs"
+  },
+  "copyreg": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "corebio": {
+   "projects": [
+    "weblogo"
+   ],
+   "source": "pipreqs"
+  },
+  "couchapp": {
+   "projects": [
+    "Couchapp"
+   ],
+   "source": "pipreqs"
+  },
+  "couchdb": {
+   "projects": [
+    "CouchDB"
+   ],
+   "source": "pipreqs"
+  },
+  "couchdbcurl": {
+   "projects": [
+    "couchdb_python_curl"
+   ],
+   "source": "pipreqs"
+  },
+  "courseradownloader": {
+   "projects": [
+    "coursera_dl"
+   ],
+   "source": "pipreqs"
+  },
+  "cow": {
+   "projects": [
+    "cow_framework"
+   ],
+   "source": "pipreqs"
+  },
+  "creole": {
+   "projects": [
+    "python_creole"
+   ],
+   "source": "pipreqs"
+  },
+  "creoleparser": {
+   "projects": [
+    "Creoleparser"
+   ],
+   "source": "pipreqs"
+  },
+  "crispy_forms": {
+   "projects": [
+    "django_crispy_forms"
+   ],
+   "source": "pipreqs"
+  },
+  "cronlog": {
+   "projects": [
+    "python_crontab"
+   ],
+   "source": "pipreqs"
+  },
+  "crontab": {
+   "projects": [
+    "python_crontab"
+   ],
+   "source": "pipreqs"
+  },
+  "ctff": {
+   "projects": [
+    "tff"
+   ],
+   "source": "pipreqs"
+  },
+  "cups": {
+   "projects": [
+    "pycups"
+   ],
+   "source": "pipreqs"
+  },
+  "curator": {
+   "projects": [
+    "elasticsearch_curator"
+   ],
+   "source": "pipreqs"
+  },
+  "curl": {
+   "projects": [
+    "pycurl"
+   ],
+   "source": "pipreqs"
+  },
+  "cv2": {
+   "projects": [
+    "opencv-python"
+   ],
+   "source": "pipreqs"
+  },
+  "daemon": {
+   "projects": [
+    "python_daemon"
+   ],
+   "source": "pipreqs"
+  },
+  "dare": {
+   "projects": [
+    "DARE"
+   ],
+   "source": "pipreqs"
+  },
+  "dateutil": {
+   "projects": [
+    "python_dateutil"
+   ],
+   "source": "pipreqs"
+  },
+  "dawg": {
+   "projects": [
+    "DAWG"
+   ],
+   "source": "pipreqs"
+  },
+  "deb822": {
+   "projects": [
+    "python_debian"
+   ],
+   "source": "pipreqs"
+  },
+  "debian": {
+   "projects": [
+    "python_debian"
+   ],
+   "source": "pipreqs"
+  },
+  "decouple": {
+   "projects": [
+    "python-decouple"
+   ],
+   "source": "pipreqs"
+  },
+  "demo": {
+   "projects": [
+    "webunit"
+   ],
+   "source": "pipreqs"
+  },
+  "demosongs": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "deployer": {
+   "projects": [
+    "juju_deployer"
+   ],
+   "source": "pipreqs"
+  },
+  "depot": {
+   "projects": [
+    "filedepot"
+   ],
+   "source": "pipreqs"
+  },
+  "devtools": {
+   "projects": [
+    "tg.devtools"
+   ],
+   "source": "pipreqs"
+  },
+  "dgis": {
+   "projects": [
+    "2gis"
+   ],
+   "source": "pipreqs"
+  },
+  "dhtmlparser": {
+   "projects": [
+    "pyDHTMLParser"
+   ],
+   "source": "pipreqs"
+  },
+  "digitalio": {
+   "projects": [
+    "adafruit-blinka"
+   ],
+   "source": "supplement"
+  },
+  "digitalocean": {
+   "projects": [
+    "python_digitalocean"
+   ],
+   "source": "pipreqs"
+  },
+  "discord": {
+   "projects": [
+    "discord.py"
+   ],
+   "source": "pipreqs"
+  },
+  "distribute_setup": {
+   "projects": [
+    "ez_setup"
+   ],
+   "source": "pipreqs"
+  },
+  "distutils2": {
+   "projects": [
+    "Distutils2"
+   ],
+   "source": "pipreqs"
+  },
+  "django": {
+   "projects": [
+    "Django"
+   ],
+   "source": "pipreqs"
+  },
+  "django_hstore": {
+   "projects": [
+    "amitu_hstore"
+   ],
+   "source": "pipreqs"
+  },
+  "djangobower": {
+   "projects": [
+    "django_bower"
+   ],
+   "source": "pipreqs"
+  },
+  "djcelery": {
+   "projects": [
+    "django_celery"
+   ],
+   "source": "pipreqs"
+  },
+  "djkombu": {
+   "projects": [
+    "django_kombu"
+   ],
+   "source": "pipreqs"
+  },
+  "djorm_pgarray": {
+   "projects": [
+    "djorm_ext_pgarray"
+   ],
+   "source": "pipreqs"
+  },
+  "dns": {
+   "projects": [
+    "dnspython"
+   ],
+   "source": "pipreqs"
+  },
+  "docgen": {
+   "projects": [
+    "ansible_docgenerator"
+   ],
+   "source": "pipreqs"
+  },
+  "docker": {
+   "projects": [
+    "docker_py"
+   ],
+   "source": "pipreqs"
+  },
+  "docx": {
+   "projects": [
+    "python-docx"
+   ],
+   "source": "supplement"
+  },
+  "dogpile": {
+   "projects": [
+    "dogpile.cache",
+    "dogpile.core"
+   ],
+   "source": "pipreqs"
+  },
+  "dogshell": {
+   "projects": [
+    "dogapi"
+   ],
+   "source": "pipreqs"
+  },
+  "dot_parser": {
+   "projects": [
+    "pydot",
+    "pydot2",
+    "pydot3k"
+   ],
+   "source": "pipreqs"
+  },
+  "dotenv": {
+   "projects": [
+    "python-dotenv"
+   ],
+   "source": "pipreqs"
+  },
+  "dpkt": {
+   "projects": [
+    "dpkt_fix"
+   ],
+   "source": "pipreqs"
+  },
+  "dsml": {
+   "projects": [
+    "python_ldap"
+   ],
+   "source": "pipreqs"
+  },
+  "durationfield": {
+   "projects": [
+    "django_durationfield"
+   ],
+   "source": "pipreqs"
+  },
+  "dzclient": {
+   "projects": [
+    "datazilla"
+   ],
+   "source": "pipreqs"
+  },
+  "easybuild": {
+   "projects": [
+    "easybuild_framework"
+   ],
+   "source": "pipreqs"
+  },
+  "editor": {
+   "projects": [
+    "python_editor"
+   ],
+   "source": "pipreqs"
+  },
+  "elasticluster": {
+   "projects": [
+    "azure_elasticluster",
+    "azure_elasticluster_current"
+   ],
+   "source": "pipreqs"
+  },
+  "elftools": {
+   "projects": [
+    "pyelftools"
+   ],
+   "source": "pipreqs"
+  },
+  "elixir": {
+   "projects": [
+    "Elixir"
+   ],
+   "source": "pipreqs"
+  },
+  "em": {
+   "projects": [
+    "empy"
+   ],
+   "source": "pipreqs"
+  },
+  "emlib": {
+   "projects": [
+    "empy"
+   ],
+   "source": "pipreqs"
+  },
+  "enchant": {
+   "projects": [
+    "pyenchant"
+   ],
+   "source": "pipreqs"
+  },
+  "encutils": {
+   "projects": [
+    "cssutils"
+   ],
+   "source": "pipreqs"
+  },
+  "engineio": {
+   "projects": [
+    "python_engineio"
+   ],
+   "source": "pipreqs"
+  },
+  "enum": {
+   "projects": [
+    "enum34"
+   ],
+   "source": "pipreqs"
+  },
+  "ephem": {
+   "projects": [
+    "pyephem"
+   ],
+   "source": "pipreqs"
+  },
+  "errorreporter": {
+   "projects": [
+    "abl.errorreporter"
+   ],
+   "source": "pipreqs"
+  },
+  "esplot": {
+   "projects": [
+    "beaker_es_plot"
+   ],
+   "source": "pipreqs"
+  },
+  "example": {
+   "projects": [
+    "adrest"
+   ],
+   "source": "pipreqs"
+  },
+  "examples": {
+   "projects": [
+    "tweepy"
+   ],
+   "source": "pipreqs"
+  },
+  "ez_setup": {
+   "projects": [
+    "pycassa"
+   ],
+   "source": "pipreqs"
+  },
+  "fabfile": {
+   "projects": [
+    "Fabric"
+   ],
+   "source": "pipreqs"
+  },
+  "fabric": {
+   "projects": [
+    "Fabric"
+   ],
+   "source": "pipreqs"
+  },
+  "faker": {
+   "projects": [
+    "Faker"
+   ],
+   "source": "pipreqs"
+  },
+  "fdpexpect": {
+   "projects": [
+    "pexpect"
+   ],
+   "source": "pipreqs"
+  },
+  "fedora": {
+   "projects": [
+    "python_fedora"
+   ],
+   "source": "pipreqs"
+  },
+  "fias": {
+   "projects": [
+    "ailove_django_fias"
+   ],
+   "source": "pipreqs"
+  },
+  "fiftyone_degrees": {
+   "projects": [
+    "51degrees_mobile_detector"
+   ],
+   "source": "pipreqs"
+  },
+  "five": {
+   "projects": [
+    "five.customerize",
+    "five.globalrequest",
+    "five.intid",
+    "five.localsitemanager",
+    "five.pt"
+   ],
+   "source": "pipreqs"
+  },
+  "flasher": {
+   "projects": [
+    "android_flasher"
+   ],
+   "source": "pipreqs"
+  },
+  "flask": {
+   "projects": [
+    "Flask"
+   ],
+   "source": "pipreqs"
+  },
+  "flask_frozen": {
+   "projects": [
+    "Frozen_Flask"
+   ],
+   "source": "pipreqs"
+  },
+  "flask_redis": {
+   "projects": [
+    "Flask_And_Redis"
+   ],
+   "source": "pipreqs"
+  },
+  "flaskext": {
+   "projects": [
+    "Flask_Bcrypt"
+   ],
+   "source": "pipreqs"
+  },
+  "flvscreen": {
+   "projects": [
+    "vnc2flv"
+   ],
+   "source": "pipreqs"
+  },
+  "followit": {
+   "projects": [
+    "django_followit"
+   ],
+   "source": "pipreqs"
+  },
+  "forge": {
+   "projects": [
+    "pyforge"
+   ],
+   "source": "pipreqs"
+  },
+  "formencode": {
+   "projects": [
+    "FormEncode"
+   ],
+   "source": "pipreqs"
+  },
+  "formtools": {
+   "projects": [
+    "django_formtools"
+   ],
+   "source": "pipreqs"
+  },
+  "fourch": {
+   "projects": [
+    "4ch"
+   ],
+   "source": "pipreqs"
+  },
+  "franz": {
+   "projects": [
+    "allegrordf"
+   ],
+   "source": "pipreqs"
+  },
+  "freetype": {
+   "projects": [
+    "freetype_py"
+   ],
+   "source": "pipreqs"
+  },
+  "frontmatter": {
+   "projects": [
+    "python_frontmatter"
+   ],
+   "source": "pipreqs"
+  },
+  "ftpcloudfs": {
+   "projects": [
+    "ftp_cloudfs"
+   ],
+   "source": "pipreqs"
+  },
+  "functional": {
+   "projects": [
+    "pyfunctional"
+   ],
+   "source": "pipreqs"
+  },
+  "funtests": {
+   "projects": [
+    "librabbitmq"
+   ],
+   "source": "pipreqs"
+  },
+  "fuse": {
+   "projects": [
+    "fusepy"
+   ],
+   "source": "pipreqs"
+  },
+  "fuzzy": {
+   "projects": [
+    "Fuzzy"
+   ],
+   "source": "pipreqs"
+  },
+  "gabbi": {
+   "projects": [
+    "tiddlyweb"
+   ],
+   "source": "pipreqs"
+  },
+  "gen_3dwallet": {
+   "projects": [
+    "3d_wallet_generator"
+   ],
+   "source": "pipreqs"
+  },
+  "gendimen": {
+   "projects": [
+    "android_gendimen"
+   ],
+   "source": "pipreqs"
+  },
+  "genshi": {
+   "projects": [
+    "Genshi"
+   ],
+   "source": "pipreqs"
+  },
+  "geohash": {
+   "projects": [
+    "python_geohash"
+   ],
+   "source": "pipreqs"
+  },
+  "geonode": {
+   "projects": [
+    "GeoNode"
+   ],
+   "source": "pipreqs"
+  },
+  "geoserver": {
+   "projects": [
+    "gsconfig"
+   ],
+   "source": "pipreqs"
+  },
+  "geraldo": {
+   "projects": [
+    "Geraldo"
+   ],
+   "source": "pipreqs"
+  },
+  "getenv": {
+   "projects": [
+    "django_getenv"
+   ],
+   "source": "pipreqs"
+  },
+  "geventwebsocket": {
+   "projects": [
+    "gevent_websocket"
+   ],
+   "source": "pipreqs"
+  },
+  "gflags": {
+   "projects": [
+    "python_gflags"
+   ],
+   "source": "pipreqs"
+  },
+  "gi": {
+   "projects": [
+    "PyGObject"
+   ],
+   "source": "supplement"
+  },
+  "git": {
+   "projects": [
+    "GitPython"
+   ],
+   "source": "pipreqs"
+  },
+  "github": {
+   "projects": [
+    "PyGithub"
+   ],
+   "source": "pipreqs"
+  },
+  "github3": {
+   "projects": [
+    "github3.py"
+   ],
+   "source": "pipreqs"
+  },
+  "gitpy": {
+   "projects": [
+    "git_py"
+   ],
+   "source": "pipreqs"
+  },
+  "globusonline": {
+   "projects": [
+    "globusonline_transfer_api_client"
+   ],
+   "source": "pipreqs"
+  },
+  "google": {
+   "projects": [
+    "protobuf"
+   ],
+   "source": "pipreqs"
+  },
+  "googleapiclient": {
+   "projects": [
+    "google_api_python_client"
+   ],
+   "source": "pipreqs"
+  },
+  "googlesearch": {
+   "projects": [
+    "googlesearch-python"
+   ],
+   "source": "supplement"
+  },
+  "grace-dizmo": {
+   "projects": [
+    "grace_dizmo"
+   ],
+   "source": "pipreqs"
+  },
+  "grammar": {
+   "projects": [
+    "anovelmous_grammar"
+   ],
+   "source": "pipreqs"
+  },
+  "grapheneapi": {
+   "projects": [
+    "graphenelib"
+   ],
+   "source": "pipreqs"
+  },
+  "greplin": {
+   "projects": [
+    "scales"
+   ],
+   "source": "pipreqs"
+  },
+  "gridfs": {
+   "projects": [
+    "pymongo"
+   ],
+   "source": "pipreqs"
+  },
+  "grokcore": {
+   "projects": [
+    "grokcore.component"
+   ],
+   "source": "pipreqs"
+  },
+  "gslib": {
+   "projects": [
+    "gsutil"
+   ],
+   "source": "pipreqs"
+  },
+  "hamcrest": {
+   "projects": [
+    "PyHamcrest"
+   ],
+   "source": "pipreqs"
+  },
+  "harpy": {
+   "projects": [
+    "HARPy"
+   ],
+   "source": "pipreqs"
+  },
+  "hawk": {
+   "projects": [
+    "PyHawk_with_a_single_extra_commit"
+   ],
+   "source": "pipreqs"
+  },
+  "haystack": {
+   "projects": [
+    "django_haystack"
+   ],
+   "source": "pipreqs"
+  },
+  "hgext": {
+   "projects": [
+    "mercurial"
+   ],
+   "source": "pipreqs"
+  },
+  "hggit": {
+   "projects": [
+    "hg_git"
+   ],
+   "source": "pipreqs"
+  },
+  "hglib": {
+   "projects": [
+    "python_hglib"
+   ],
+   "source": "pipreqs"
+  },
+  "ho": {
+   "projects": [
+    "pisa"
+   ],
+   "source": "pipreqs"
+  },
+  "hola": {
+   "projects": [
+    "amarokHola"
+   ],
+   "source": "pipreqs"
+  },
+  "hoover": {
+   "projects": [
+    "Hoover"
+   ],
+   "source": "pipreqs"
+  },
+  "hostlist": {
+   "projects": [
+    "python_hostlist"
+   ],
+   "source": "pipreqs"
+  },
+  "html": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "htmloutput": {
+   "projects": [
+    "nosehtmloutput"
+   ],
+   "source": "pipreqs"
+  },
+  "http": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "hvad": {
+   "projects": [
+    "django_hvad"
+   ],
+   "source": "pipreqs"
+  },
+  "hydra": {
+   "projects": [
+    "hydra-core"
+   ],
+   "source": "pipreqs"
+  },
+  "i99fix": {
+   "projects": [
+    "199Fix"
+   ],
+   "source": "pipreqs"
+  },
+  "igraph": {
+   "projects": [
+    "python_igraph"
+   ],
+   "source": "pipreqs"
+  },
+  "imdb": {
+   "projects": [
+    "IMDbPY"
+   ],
+   "source": "pipreqs"
+  },
+  "impala": {
+   "projects": [
+    "impyla"
+   ],
+   "source": "pipreqs"
+  },
+  "inmemorystorage": {
+   "projects": [
+    "ambition_inmemorystorage"
+   ],
+   "source": "pipreqs"
+  },
+  "ipaddress": {
+   "projects": [
+    "backport_ipaddress"
+   ],
+   "source": "pipreqs"
+  },
+  "jaraco": {
+   "projects": [
+    "jaraco.timing",
+    "jaraco.util"
+   ],
+   "source": "pipreqs"
+  },
+  "jinja2": {
+   "projects": [
+    "Jinja2"
+   ],
+   "source": "pipreqs"
+  },
+  "jiracli": {
+   "projects": [
+    "jira_cli"
+   ],
+   "source": "pipreqs"
+  },
+  "johnny": {
+   "projects": [
+    "johnny_cache"
+   ],
+   "source": "pipreqs"
+  },
+  "jose": {
+   "projects": [
+    "python_jose"
+   ],
+   "source": "pipreqs"
+  },
+  "jpgrid": {
+   "projects": [
+    "python_geohash"
+   ],
+   "source": "pipreqs"
+  },
+  "jpiarea": {
+   "projects": [
+    "python_geohash"
+   ],
+   "source": "pipreqs"
+  },
+  "jpype": {
+   "projects": [
+    "JPype1"
+   ],
+   "source": "pipreqs"
+  },
+  "jpypex": {
+   "projects": [
+    "JPype1"
+   ],
+   "source": "pipreqs"
+  },
+  "jsonfield": {
+   "projects": [
+    "django_jsonfield"
+   ],
+   "source": "pipreqs"
+  },
+  "jstools": {
+   "projects": [
+    "aino_jstools"
+   ],
+   "source": "pipreqs"
+  },
+  "jupyterpip": {
+   "projects": [
+    "jupyter_pip"
+   ],
+   "source": "pipreqs"
+  },
+  "jwt": {
+   "projects": [
+    "PyJWT"
+   ],
+   "source": "pipreqs"
+  },
+  "kazoo": {
+   "projects": [
+    "asana_kazoo"
+   ],
+   "source": "pipreqs"
+  },
+  "kernprof": {
+   "projects": [
+    "line_profiler"
+   ],
+   "source": "pipreqs"
+  },
+  "keyczar": {
+   "projects": [
+    "python_keyczar"
+   ],
+   "source": "pipreqs"
+  },
+  "keyedcache": {
+   "projects": [
+    "django_keyedcache"
+   ],
+   "source": "pipreqs"
+  },
+  "keystoneclient": {
+   "projects": [
+    "python_keystoneclient"
+   ],
+   "source": "pipreqs"
+  },
+  "kickstarter": {
+   "projects": [
+    "kickstart"
+   ],
+   "source": "pipreqs"
+  },
+  "krbv": {
+   "projects": [
+    "krbV"
+   ],
+   "source": "pipreqs"
+  },
+  "kss": {
+   "projects": [
+    "kss.core"
+   ],
+   "source": "pipreqs"
+  },
+  "kuyruk": {
+   "projects": [
+    "Kuyruk"
+   ],
+   "source": "pipreqs"
+  },
+  "langconv": {
+   "projects": [
+    "AdvancedLangConv"
+   ],
+   "source": "pipreqs"
+  },
+  "lava": {
+   "projects": [
+    "lava_utils_interface"
+   ],
+   "source": "pipreqs"
+  },
+  "lazr": {
+   "projects": [
+    "lazr.authentication",
+    "lazr.restfulclient",
+    "lazr.uri"
+   ],
+   "source": "pipreqs"
+  },
+  "ldap": {
+   "projects": [
+    "python_ldap"
+   ],
+   "source": "pipreqs"
+  },
+  "ldaplib": {
+   "projects": [
+    "adpasswd"
+   ],
+   "source": "pipreqs"
+  },
+  "ldapurl": {
+   "projects": [
+    "python_ldap"
+   ],
+   "source": "pipreqs"
+  },
+  "ldif": {
+   "projects": [
+    "python_ldap"
+   ],
+   "source": "pipreqs"
+  },
+  "lib2or3": {
+   "projects": [
+    "2or3"
+   ],
+   "source": "pipreqs"
+  },
+  "lib3to2": {
+   "projects": [
+    "3to2"
+   ],
+   "source": "pipreqs"
+  },
+  "libaito": {
+   "projects": [
+    "Aito"
+   ],
+   "source": "pipreqs"
+  },
+  "libbe": {
+   "projects": [
+    "bugs_everywhere"
+   ],
+   "source": "pipreqs"
+  },
+  "libbucket": {
+   "projects": [
+    "bucket"
+   ],
+   "source": "pipreqs"
+  },
+  "libcloud": {
+   "projects": [
+    "apache_libcloud"
+   ],
+   "source": "pipreqs"
+  },
+  "libfuturize": {
+   "projects": [
+    "future"
+   ],
+   "source": "pipreqs"
+  },
+  "libgenerateDS": {
+   "projects": [
+    "generateDS"
+   ],
+   "source": "pipreqs"
+  },
+  "libmproxy": {
+   "projects": [
+    "mitmproxy"
+   ],
+   "source": "pipreqs"
+  },
+  "libpasteurize": {
+   "projects": [
+    "future"
+   ],
+   "source": "pipreqs"
+  },
+  "libsvm": {
+   "projects": [
+    "7lk_ocr_deploy"
+   ],
+   "source": "pipreqs"
+  },
+  "lisa": {
+   "projects": [
+    "lisa_server"
+   ],
+   "source": "pipreqs"
+  },
+  "loadingandsaving": {
+   "projects": [
+    "aspose_words_java_for_python"
+   ],
+   "source": "pipreqs"
+  },
+  "locust": {
+   "projects": [
+    "locustio"
+   ],
+   "source": "pipreqs"
+  },
+  "logbook": {
+   "projects": [
+    "Logbook"
+   ],
+   "source": "pipreqs"
+  },
+  "logentries": {
+   "projects": [
+    "buildbot_status_logentries"
+   ],
+   "source": "pipreqs"
+  },
+  "logilab": {
+   "projects": [
+    "logilab_mtconverter"
+   ],
+   "source": "pipreqs"
+  },
+  "machineconsole": {
+   "projects": [
+    "cerebrod"
+   ],
+   "source": "pipreqs"
+  },
+  "machinesitter": {
+   "projects": [
+    "cerebrod"
+   ],
+   "source": "pipreqs"
+  },
+  "magic": {
+   "projects": [
+    "python_magic"
+   ],
+   "source": "pipreqs"
+  },
+  "mako": {
+   "projects": [
+    "Mako"
+   ],
+   "source": "pipreqs"
+  },
+  "manifestparser": {
+   "projects": [
+    "ManifestDestiny"
+   ],
+   "source": "pipreqs"
+  },
+  "marionette": {
+   "projects": [
+    "marionette_client"
+   ],
+   "source": "pipreqs"
+  },
+  "markdown": {
+   "projects": [
+    "Markdown"
+   ],
+   "source": "pipreqs"
+  },
+  "marks": {
+   "projects": [
+    "pytest_marks"
+   ],
+   "source": "pipreqs"
+  },
+  "markupsafe": {
+   "projects": [
+    "MarkupSafe"
+   ],
+   "source": "pipreqs"
+  },
+  "mavnative": {
+   "projects": [
+    "pymavlink"
+   ],
+   "source": "pipreqs"
+  },
+  "memcache": {
+   "projects": [
+    "python_memcached"
+   ],
+   "source": "pipreqs"
+  },
+  "mesonpy": {
+   "projects": [
+    "meson-python"
+   ],
+   "source": "pipreqs"
+  },
+  "metacomm": {
+   "projects": [
+    "AllPairs"
+   ],
+   "source": "pipreqs"
+  },
+  "metaphone": {
+   "projects": [
+    "Metafone"
+   ],
+   "source": "pipreqs"
+  },
+  "metlog": {
+   "projects": [
+    "metlog_py"
+   ],
+   "source": "pipreqs"
+  },
+  "mezzanine": {
+   "projects": [
+    "Mezzanine"
+   ],
+   "source": "pipreqs"
+  },
+  "migrate": {
+   "projects": [
+    "sqlalchemy_migrate"
+   ],
+   "source": "pipreqs"
+  },
+  "mimeparse": {
+   "projects": [
+    "python_mimeparse"
+   ],
+   "source": "pipreqs"
+  },
+  "minitage": {
+   "projects": [
+    "minitage.paste",
+    "minitage.recipe.common"
+   ],
+   "source": "pipreqs"
+  },
+  "missingdrawables": {
+   "projects": [
+    "android_missingdrawables"
+   ],
+   "source": "pipreqs"
+  },
+  "mixfiles": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "mkfreq": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "mkrst_themes": {
+   "projects": [
+    "2lazy2rest"
+   ],
+   "source": "pipreqs"
+  },
+  "mockredis": {
+   "projects": [
+    "mockredispy"
+   ],
+   "source": "pipreqs"
+  },
+  "modargs": {
+   "projects": [
+    "python_modargs"
+   ],
+   "source": "pipreqs"
+  },
+  "model_utils": {
+   "projects": [
+    "django_model_utils"
+   ],
+   "source": "pipreqs"
+  },
+  "models": {
+   "projects": [
+    "asposebarcode",
+    "asposestorage"
+   ],
+   "source": "pipreqs"
+  },
+  "moksha": {
+   "projects": [
+    "moksha.common",
+    "moksha.hub",
+    "moksha.wsgi"
+   ],
+   "source": "pipreqs"
+  },
+  "moneyed": {
+   "projects": [
+    "py_moneyed"
+   ],
+   "source": "pipreqs"
+  },
+  "mongoalchemy": {
+   "projects": [
+    "MongoAlchemy"
+   ],
+   "source": "pipreqs"
+  },
+  "monthdelta": {
+   "projects": [
+    "MonthDelta"
+   ],
+   "source": "pipreqs"
+  },
+  "mopidy": {
+   "projects": [
+    "Mopidy"
+   ],
+   "source": "pipreqs"
+  },
+  "mopytools": {
+   "projects": [
+    "MoPyTools"
+   ],
+   "source": "pipreqs"
+  },
+  "mpl_toolkits": {
+   "projects": [
+    "matplotlib"
+   ],
+   "source": "supplement"
+  },
+  "mptt": {
+   "projects": [
+    "django_mptt"
+   ],
+   "source": "pipreqs"
+  },
+  "mpv": {
+   "projects": [
+    "python-mpv"
+   ],
+   "source": "pipreqs"
+  },
+  "mrbob": {
+   "projects": [
+    "mr.bob"
+   ],
+   "source": "pipreqs"
+  },
+  "msgpack": {
+   "projects": [
+    "msgpack_python"
+   ],
+   "source": "pipreqs"
+  },
+  "mutations": {
+   "projects": [
+    "aino_mutations"
+   ],
+   "source": "pipreqs"
+  },
+  "mws": {
+   "projects": [
+    "amazon_mws"
+   ],
+   "source": "pipreqs"
+  },
+  "mysql": {
+   "projects": [
+    "mysql_connector_repackaged"
+   ],
+   "source": "pipreqs"
+  },
+  "native_tags": {
+   "projects": [
+    "django_native_tags"
+   ],
+   "source": "pipreqs"
+  },
+  "ndg": {
+   "projects": [
+    "ndg_httpsclient"
+   ],
+   "source": "pipreqs"
+  },
+  "nereid": {
+   "projects": [
+    "trytond_nereid"
+   ],
+   "source": "pipreqs"
+  },
+  "nested": {
+   "projects": [
+    "baojinhuan"
+   ],
+   "source": "pipreqs"
+  },
+  "nester": {
+   "projects": [
+    "Amauri",
+    "abofly",
+    "bssm_pythonSig"
+   ],
+   "source": "pipreqs"
+  },
+  "novaclient": {
+   "projects": [
+    "python_novaclient"
+   ],
+   "source": "pipreqs"
+  },
+  "oauth2_provider": {
+   "projects": [
+    "alauda_django_oauth"
+   ],
+   "source": "pipreqs"
+  },
+  "oauth2client": {
+   "projects": [
+    "oauth2client"
+   ],
+   "source": "pipreqs"
+  },
+  "odf": {
+   "projects": [
+    "odfpy"
+   ],
+   "source": "pipreqs"
+  },
+  "ometa": {
+   "projects": [
+    "Parsley"
+   ],
+   "source": "pipreqs"
+  },
+  "openid": {
+   "projects": [
+    "python_openid"
+   ],
+   "source": "pipreqs"
+  },
+  "opensearchsdk": {
+   "projects": [
+    "ali_opensearch"
+   ],
+   "source": "pipreqs"
+  },
+  "oslo_i18n": {
+   "projects": [
+    "oslo.i18n"
+   ],
+   "source": "pipreqs"
+  },
+  "oslo_serialization": {
+   "projects": [
+    "oslo.serialization"
+   ],
+   "source": "pipreqs"
+  },
+  "oslo_utils": {
+   "projects": [
+    "oslo.utils"
+   ],
+   "source": "pipreqs"
+  },
+  "oss": {
+   "projects": [
+    "alioss",
+    "aliyun_python_sdk_oss",
+    "aliyunoss"
+   ],
+   "source": "pipreqs"
+  },
+  "output": {
+   "projects": [
+    "cashew"
+   ],
+   "source": "pipreqs"
+  },
+  "owslib": {
+   "projects": [
+    "OWSLib"
+   ],
+   "source": "pipreqs"
+  },
+  "packetdiag": {
+   "projects": [
+    "nwdiag"
+   ],
+   "source": "pipreqs"
+  },
+  "paho": {
+   "projects": [
+    "paho_mqtt"
+   ],
+   "source": "pipreqs"
+  },
+  "paintstore": {
+   "projects": [
+    "django_paintstore"
+   ],
+   "source": "pipreqs"
+  },
+  "parler": {
+   "projects": [
+    "django_parler"
+   ],
+   "source": "pipreqs"
+  },
+  "past": {
+   "projects": [
+    "future"
+   ],
+   "source": "pipreqs"
+  },
+  "paste": {
+   "projects": [
+    "PasteScript"
+   ],
+   "source": "pipreqs"
+  },
+  "path": {
+   "projects": [
+    "forked_path",
+    "path.py"
+   ],
+   "source": "pipreqs"
+  },
+  "patricia": {
+   "projects": [
+    "patricia-trie"
+   ],
+   "source": "pipreqs"
+  },
+  "paver": {
+   "projects": [
+    "Paver"
+   ],
+   "source": "pipreqs"
+  },
+  "peak": {
+   "projects": [
+    "ProxyTypes"
+   ],
+   "source": "pipreqs"
+  },
+  "picasso": {
+   "projects": [
+    "anderson.picasso"
+   ],
+   "source": "pipreqs"
+  },
+  "picklefield": {
+   "projects": [
+    "django-picklefield"
+   ],
+   "source": "pipreqs"
+  },
+  "pilot": {
+   "projects": [
+    "BigJob"
+   ],
+   "source": "pipreqs"
+  },
+  "pivotal": {
+   "projects": [
+    "pivotal_py"
+   ],
+   "source": "pipreqs"
+  },
+  "pkg_resources": {
+   "projects": [
+    "setuptools"
+   ],
+   "source": "supplement"
+  },
+  "play_wav": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "playhouse": {
+   "projects": [
+    "peewee"
+   ],
+   "source": "pipreqs"
+  },
+  "plivoxml": {
+   "projects": [
+    "plivo"
+   ],
+   "source": "pipreqs"
+  },
+  "plone": {
+   "projects": [
+    "plone.alterego",
+    "plone.api",
+    "plone.app.blob",
+    "plone.app.collection",
+    "plone.app.content",
+    "plone.app.contentlisting",
+    "plone.app.contentmenu",
+    "plone.app.contentrules",
+    "plone.app.contenttypes",
+    "plone.app.controlpanel",
+    "plone.app.customerize",
+    "plone.app.dexterity",
+    "plone.app.discussion",
+    "plone.app.event",
+    "plone.app.folder",
+    "plone.app.i18n",
+    "plone.app.imaging",
+    "plone.app.intid",
+    "plone.app.layout",
+    "plone.app.linkintegrity",
+    "plone.app.locales",
+    "plone.app.lockingbehavior",
+    "plone.app.multilingual",
+    "plone.app.portlets",
+    "plone.app.querystring",
+    "plone.app.redirector",
+    "plone.app.registry",
+    "plone.app.relationfield",
+    "plone.app.textfield",
+    "plone.app.theming",
+    "plone.app.users",
+    "plone.app.uuid",
+    "plone.app.versioningbehavior",
+    "plone.app.viewletmanager",
+    "plone.app.vocabularies",
+    "plone.app.widgets",
+    "plone.app.workflow",
+    "plone.app.z3cform",
+    "plone.autoform",
+    "plone.batching",
+    "plone.behavior",
+    "plone.browserlayer",
+    "plone.caching",
+    "plone.contentrules",
+    "plone.dexterity",
+    "plone.event",
+    "plone.folder",
+    "plone.formwidget.namedfile",
+    "plone.formwidget.recurrence",
+    "plone.i18n",
+    "plone.indexer",
+    "plone.intelligenttext",
+    "plone.keyring",
+    "plone.locking",
+    "plone.memoize",
+    "plone.namedfile",
+    "plone.outputfilters",
+    "plone.portlet.collection",
+    "plone.portlet.static",
+    "plone.portlets",
+    "plone.protect",
+    "plone.recipe.zope2install",
+    "plone.registry",
+    "plone.resource",
+    "plone.resourceeditor",
+    "plone.rfc822",
+    "plone.scale",
+    "plone.schema",
+    "plone.schemaeditor",
+    "plone.session",
+    "plone.stringinterp",
+    "plone.subrequest",
+    "plone.supermodel",
+    "plone.synchronize",
+    "plone.theme",
+    "plone.transformchain",
+    "plone.uuid",
+    "plone.z3cform"
+   ],
+   "source": "pipreqs"
+  },
+  "plonetheme": {
+   "projects": [
+    "plonetheme.barceloneta"
+   ],
+   "source": "pipreqs"
+  },
+  "png": {
+   "projects": [
+    "pypng"
+   ],
+   "source": "pipreqs"
+  },
+  "polymorphic": {
+   "projects": [
+    "django_polymorphic"
+   ],
+   "source": "pipreqs"
+  },
+  "postmark": {
+   "projects": [
+    "python_postmark"
+   ],
+   "source": "pipreqs"
+  },
+  "powerprompt": {
+   "projects": [
+    "bash_powerprompt"
+   ],
+   "source": "pipreqs"
+  },
+  "prefetch": {
+   "projects": [
+    "django-prefetch"
+   ],
+   "source": "pipreqs"
+  },
+  "printList": {
+   "projects": [
+    "AndrewList"
+   ],
+   "source": "pipreqs"
+  },
+  "progressbar": {
+   "projects": [
+    "progressbar2",
+    "progressbar33"
+   ],
+   "source": "pipreqs"
+  },
+  "provider": {
+   "projects": [
+    "django_oauth2_provider"
+   ],
+   "source": "pipreqs"
+  },
+  "puresasl": {
+   "projects": [
+    "pure_sasl"
+   ],
+   "source": "pipreqs"
+  },
+  "pwiz": {
+   "projects": [
+    "peewee"
+   ],
+   "source": "pipreqs"
+  },
+  "pxssh": {
+   "projects": [
+    "pexpect"
+   ],
+   "source": "pipreqs"
+  },
+  "py7zlib": {
+   "projects": [
+    "pylzma"
+   ],
+   "source": "pipreqs"
+  },
+  "pyAMI": {
+   "projects": [
+    "pyAMI_core"
+   ],
+   "source": "pipreqs"
+  },
+  "pyarsespyder": {
+   "projects": [
+    "arsespyder"
+   ],
+   "source": "pipreqs"
+  },
+  "pyasdf": {
+   "projects": [
+    "asdf"
+   ],
+   "source": "pipreqs"
+  },
+  "pyaspell": {
+   "projects": [
+    "aspell_python_ctypes"
+   ],
+   "source": "pipreqs"
+  },
+  "pybb": {
+   "projects": [
+    "pybbm"
+   ],
+   "source": "pipreqs"
+  },
+  "pybloomfilter": {
+   "projects": [
+    "pybloomfiltermmap"
+   ],
+   "source": "pipreqs"
+  },
+  "pyccuracy": {
+   "projects": [
+    "Pyccuracy"
+   ],
+   "source": "pipreqs"
+  },
+  "pyck": {
+   "projects": [
+    "PyCK"
+   ],
+   "source": "pipreqs"
+  },
+  "pycrfsuite": {
+   "projects": [
+    "python_crfsuite"
+   ],
+   "source": "pipreqs"
+  },
+  "pydispatch": {
+   "projects": [
+    "PyDispatcher"
+   ],
+   "source": "pipreqs"
+  },
+  "pygeolib": {
+   "projects": [
+    "pygeocoder"
+   ],
+   "source": "pipreqs"
+  },
+  "pygments": {
+   "projects": [
+    "Pygments"
+   ],
+   "source": "pipreqs"
+  },
+  "pygraph": {
+   "projects": [
+    "python_graph_core"
+   ],
+   "source": "pipreqs"
+  },
+  "pyjon": {
+   "projects": [
+    "pyjon.utils"
+   ],
+   "source": "pipreqs"
+  },
+  "pyjsonrpc": {
+   "projects": [
+    "python_jsonrpc"
+   ],
+   "source": "pipreqs"
+  },
+  "pykka": {
+   "projects": [
+    "Pykka"
+   ],
+   "source": "pipreqs"
+  },
+  "pylogo": {
+   "projects": [
+    "PyLogo"
+   ],
+   "source": "pipreqs"
+  },
+  "pylons": {
+   "projects": [
+    "adhocracy_Pylons"
+   ],
+   "source": "pipreqs"
+  },
+  "pymagic": {
+   "projects": [
+    "libmagic"
+   ],
+   "source": "pipreqs"
+  },
+  "pymycraawler": {
+   "projects": [
+    "Amalwebcrawler"
+   ],
+   "source": "pipreqs"
+  },
+  "pynma": {
+   "projects": [
+    "AbakaffeNotifier"
+   ],
+   "source": "pipreqs"
+  },
+  "pyphen": {
+   "projects": [
+    "Pyphen"
+   ],
+   "source": "pipreqs"
+  },
+  "pyrimaa": {
+   "projects": [
+    "AEI"
+   ],
+   "source": "pipreqs"
+  },
+  "pysideuic": {
+   "projects": [
+    "PySide"
+   ],
+   "source": "pipreqs"
+  },
+  "pysqlite2": {
+   "projects": [
+    "adhocracy_pysqlite",
+    "pysqlite"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_b": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_beeper": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_c": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_d": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_e": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_p": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_s": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pysynth_samp": {
+   "projects": [
+    "PySynth"
+   ],
+   "source": "pipreqs"
+  },
+  "pythoncom": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "pythongettext": {
+   "projects": [
+    "python_gettext"
+   ],
+   "source": "pipreqs"
+  },
+  "pythonjsonlogger": {
+   "projects": [
+    "python_json_logger"
+   ],
+   "source": "pipreqs"
+  },
+  "pyutilib": {
+   "projects": [
+    "PyUtilib"
+   ],
+   "source": "pipreqs"
+  },
+  "pywintypes": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "pipreqs"
+  },
+  "pyximport": {
+   "projects": [
+    "Cython"
+   ],
+   "source": "pipreqs"
+  },
+  "qs": {
+   "projects": [
+    "qserve"
+   ],
+   "source": "pipreqs"
+  },
+  "quadtree": {
+   "projects": [
+    "python_geohash"
+   ],
+   "source": "pipreqs"
+  },
+  "queue": {
+   "projects": [
+    "future"
+   ],
+   "source": "pipreqs"
+  },
+  "quickapi": {
+   "projects": [
+    "django_quickapi"
+   ],
+   "source": "pipreqs"
+  },
+  "quickunit": {
+   "projects": [
+    "nose_quickunit"
+   ],
+   "source": "pipreqs"
+  },
+  "rackdiag": {
+   "projects": [
+    "nwdiag"
+   ],
+   "source": "pipreqs"
+  },
+  "radical": {
+   "projects": [
+    "radical.pilot",
+    "radical.utils"
+   ],
+   "source": "pipreqs"
+  },
+  "reStructuredText": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "readability": {
+   "projects": [
+    "readability_lxml"
+   ],
+   "source": "pipreqs"
+  },
+  "readline": {
+   "projects": [
+    "gnureadline"
+   ],
+   "source": "pipreqs"
+  },
+  "recaptcha_works": {
+   "projects": [
+    "django_recaptcha_works"
+   ],
+   "source": "pipreqs"
+  },
+  "relstorage": {
+   "projects": [
+    "RelStorage"
+   ],
+   "source": "pipreqs"
+  },
+  "reportapi": {
+   "projects": [
+    "django_reportapi"
+   ],
+   "source": "pipreqs"
+  },
+  "reprlib": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "requests": {
+   "projects": [
+    "Requests"
+   ],
+   "source": "pipreqs"
+  },
+  "requirements": {
+   "projects": [
+    "requirements_parser"
+   ],
+   "source": "pipreqs"
+  },
+  "rest_framework": {
+   "projects": [
+    "djangorestframework"
+   ],
+   "source": "pipreqs"
+  },
+  "restclient": {
+   "projects": [
+    "py_restclient"
+   ],
+   "source": "pipreqs"
+  },
+  "retrial": {
+   "projects": [
+    "async_retrial"
+   ],
+   "source": "pipreqs"
+  },
+  "reversion": {
+   "projects": [
+    "django_reversion"
+   ],
+   "source": "pipreqs"
+  },
+  "rhaptos2": {
+   "projects": [
+    "rhaptos2.common"
+   ],
+   "source": "pipreqs"
+  },
+  "robot": {
+   "projects": [
+    "robotframework"
+   ],
+   "source": "pipreqs"
+  },
+  "robots": {
+   "projects": [
+    "django_robots"
+   ],
+   "source": "pipreqs"
+  },
+  "rosdep2": {
+   "projects": [
+    "rosdep"
+   ],
+   "source": "pipreqs"
+  },
+  "rsbackends": {
+   "projects": [
+    "RSFile"
+   ],
+   "source": "pipreqs"
+  },
+  "ruamel": {
+   "projects": [
+    "ruamel.base"
+   ],
+   "source": "pipreqs"
+  },
+  "s2repoze": {
+   "projects": [
+    "pysaml2"
+   ],
+   "source": "pipreqs"
+  },
+  "saga": {
+   "projects": [
+    "saga_python"
+   ],
+   "source": "pipreqs"
+  },
+  "saml2": {
+   "projects": [
+    "pysaml2"
+   ],
+   "source": "pipreqs"
+  },
+  "samtranslator": {
+   "projects": [
+    "aws-sam-translator"
+   ],
+   "source": "pipreqs"
+  },
+  "sass": {
+   "projects": [
+    "libsass"
+   ],
+   "source": "pipreqs"
+  },
+  "sassc": {
+   "projects": [
+    "libsass"
+   ],
+   "source": "pipreqs"
+  },
+  "sasstests": {
+   "projects": [
+    "libsass"
+   ],
+   "source": "pipreqs"
+  },
+  "sassutils": {
+   "projects": [
+    "libsass"
+   ],
+   "source": "pipreqs"
+  },
+  "sayhi": {
+   "projects": [
+    "alex_sayhi"
+   ],
+   "source": "pipreqs"
+  },
+  "scalrtools": {
+   "projects": [
+    "scalr"
+   ],
+   "source": "pipreqs"
+  },
+  "scikits": {
+   "projects": [
+    "scikits.talkbox"
+   ],
+   "source": "pipreqs"
+  },
+  "scratch": {
+   "projects": [
+    "scratchpy"
+   ],
+   "source": "pipreqs"
+  },
+  "screen": {
+   "projects": [
+    "pexpect"
+   ],
+   "source": "pipreqs"
+  },
+  "scss": {
+   "projects": [
+    "pyScss"
+   ],
+   "source": "pipreqs"
+  },
+  "sdict": {
+   "projects": [
+    "dict.sorted"
+   ],
+   "source": "pipreqs"
+  },
+  "sdk_updater": {
+   "projects": [
+    "android_sdk_updater"
+   ],
+   "source": "pipreqs"
+  },
+  "sekizai": {
+   "projects": [
+    "django_sekizai"
+   ],
+   "source": "pipreqs"
+  },
+  "sendfile": {
+   "projects": [
+    "pysendfile"
+   ],
+   "source": "pipreqs"
+  },
+  "serial": {
+   "projects": [
+    "pyserial"
+   ],
+   "source": "pipreqs"
+  },
+  "setuputils": {
+   "projects": [
+    "astor"
+   ],
+   "source": "pipreqs"
+  },
+  "shapefile": {
+   "projects": [
+    "pyshp"
+   ],
+   "source": "pipreqs"
+  },
+  "shapely": {
+   "projects": [
+    "Shapely"
+   ],
+   "source": "pipreqs"
+  },
+  "sika": {
+   "projects": [
+    "ahonya_sika"
+   ],
+   "source": "pipreqs"
+  },
+  "singleton": {
+   "projects": [
+    "pysingleton"
+   ],
+   "source": "pipreqs"
+  },
+  "sittercommon": {
+   "projects": [
+    "cerebrod"
+   ],
+   "source": "pipreqs"
+  },
+  "skbio": {
+   "projects": [
+    "scikit_bio"
+   ],
+   "source": "pipreqs"
+  },
+  "skimage": {
+   "projects": [
+    "scikit-image"
+   ],
+   "source": "supplement"
+  },
+  "sklearn": {
+   "projects": [
+    "scikit_learn"
+   ],
+   "source": "pipreqs"
+  },
+  "slack": {
+   "projects": [
+    "slackclient"
+   ],
+   "source": "pipreqs"
+  },
+  "slugify": {
+   "projects": [
+    "unicode_slugify",
+    "python-slugify"
+   ],
+   "source": "pipreqs"
+  },
+  "smarkets": {
+   "projects": [
+    "smk_python_sdk"
+   ],
+   "source": "pipreqs"
+  },
+  "smb": {
+   "projects": [
+    "pysmb"
+   ],
+   "source": "supplement"
+  },
+  "snappy": {
+   "projects": [
+    "ctypes_snappy"
+   ],
+   "source": "pipreqs"
+  },
+  "socketio": {
+   "projects": [
+    "python-socketio"
+   ],
+   "source": "pipreqs"
+  },
+  "socketserver": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "sockjs": {
+   "projects": [
+    "sockjs_tornado"
+   ],
+   "source": "pipreqs"
+  },
+  "socks": {
+   "projects": [
+    "SocksiPy_branch"
+   ],
+   "source": "pipreqs"
+  },
+  "solr": {
+   "projects": [
+    "solrpy"
+   ],
+   "source": "pipreqs"
+  },
+  "solution": {
+   "projects": [
+    "Solution"
+   ],
+   "source": "pipreqs"
+  },
+  "sorl": {
+   "projects": [
+    "sorl_thumbnail"
+   ],
+   "source": "pipreqs"
+  },
+  "south": {
+   "projects": [
+    "South"
+   ],
+   "source": "pipreqs"
+  },
+  "speech_recognition": {
+   "projects": [
+    "SpeechRecognition"
+   ],
+   "source": "pipreqs"
+  },
+  "sphinx": {
+   "projects": [
+    "Sphinx"
+   ],
+   "source": "pipreqs"
+  },
+  "sphinx_pypi_upload": {
+   "projects": [
+    "ATD_document"
+   ],
+   "source": "pipreqs"
+  },
+  "sphinxcontrib": {
+   "projects": [
+    "sphinxcontrib_programoutput"
+   ],
+   "source": "pipreqs"
+  },
+  "sqlalchemy": {
+   "projects": [
+    "SQLAlchemy"
+   ],
+   "source": "pipreqs"
+  },
+  "src": {
+   "projects": [
+    "atlas",
+    "auto_mix_prep"
+   ],
+   "source": "pipreqs"
+  },
+  "stats_toolkit": {
+   "projects": [
+    "bw_stats_toolkit"
+   ],
+   "source": "pipreqs"
+  },
+  "statsd": {
+   "projects": [
+    "dogstatsd_python"
+   ],
+   "source": "pipreqs"
+  },
+  "stdnum": {
+   "projects": [
+    "python_stdnum"
+   ],
+   "source": "pipreqs"
+  },
+  "stoneagehtml": {
+   "projects": [
+    "StoneageHTML"
+   ],
+   "source": "pipreqs"
+  },
+  "storages": {
+   "projects": [
+    "django_storages"
+   ],
+   "source": "pipreqs"
+  },
+  "stubout": {
+   "projects": [
+    "mox"
+   ],
+   "source": "pipreqs"
+  },
+  "suds": {
+   "projects": [
+    "suds_jurko"
+   ],
+   "source": "pipreqs"
+  },
+  "swiftclient": {
+   "projects": [
+    "python_swiftclient"
+   ],
+   "source": "pipreqs"
+  },
+  "sx": {
+   "projects": [
+    "pisa"
+   ],
+   "source": "pipreqs"
+  },
+  "tabix": {
+   "projects": [
+    "pytabix"
+   ],
+   "source": "pipreqs"
+  },
+  "taggit": {
+   "projects": [
+    "django_taggit"
+   ],
+   "source": "pipreqs"
+  },
+  "tasksitter": {
+   "projects": [
+    "cerebrod"
+   ],
+   "source": "pipreqs"
+  },
+  "tastypie": {
+   "projects": [
+    "django_tastypie"
+   ],
+   "source": "pipreqs"
+  },
+  "teamcity": {
+   "projects": [
+    "teamcity_messages"
+   ],
+   "source": "pipreqs"
+  },
+  "telebot": {
+   "projects": [
+    "pyTelegramBotAPI"
+   ],
+   "source": "pipreqs"
+  },
+  "telegram": {
+   "projects": [
+    "python-telegram-bot"
+   ],
+   "source": "pipreqs"
+  },
+  "tempita": {
+   "projects": [
+    "Tempita"
+   ],
+   "source": "pipreqs"
+  },
+  "tenjin": {
+   "projects": [
+    "Tenjin"
+   ],
+   "source": "pipreqs"
+  },
+  "termstyle": {
+   "projects": [
+    "python_termstyle"
+   ],
+   "source": "pipreqs"
+  },
+  "test": {
+   "projects": [
+    "pytabix"
+   ],
+   "source": "pipreqs"
+  },
+  "thclient": {
+   "projects": [
+    "treeherder_client"
+   ],
+   "source": "pipreqs"
+  },
+  "threaded_multihost": {
+   "projects": [
+    "django_threaded_multihost"
+   ],
+   "source": "pipreqs"
+  },
+  "threecolor": {
+   "projects": [
+    "3color_Press"
+   ],
+   "source": "pipreqs"
+  },
+  "tidylib": {
+   "projects": [
+    "pytidylib"
+   ],
+   "source": "pipreqs"
+  },
+  "tkinter": {
+   "projects": [
+    "future"
+   ],
+   "source": "pipreqs"
+  },
+  "tlw": {
+   "projects": [
+    "3lwg"
+   ],
+   "source": "pipreqs"
+  },
+  "toredis": {
+   "projects": [
+    "toredis_fork"
+   ],
+   "source": "pipreqs"
+  },
+  "tornadoredis": {
+   "projects": [
+    "tornado_redis"
+   ],
+   "source": "pipreqs"
+  },
+  "tower_cli": {
+   "projects": [
+    "ansible_tower_cli"
+   ],
+   "source": "pipreqs"
+  },
+  "trac": {
+   "projects": [
+    "Trac"
+   ],
+   "source": "pipreqs"
+  },
+  "tracopt": {
+   "projects": [
+    "Trac"
+   ],
+   "source": "pipreqs"
+  },
+  "translation_helper": {
+   "projects": [
+    "android_localization_helper"
+   ],
+   "source": "pipreqs"
+  },
+  "treebeard": {
+   "projects": [
+    "django_treebeard"
+   ],
+   "source": "pipreqs"
+  },
+  "trytond": {
+   "projects": [
+    "trytond_stock"
+   ],
+   "source": "pipreqs"
+  },
+  "tsuru": {
+   "projects": [
+    "tsuru_circus"
+   ],
+   "source": "pipreqs"
+  },
+  "tvrage": {
+   "projects": [
+    "python_tvrage"
+   ],
+   "source": "pipreqs"
+  },
+  "tw2": {
+   "projects": [
+    "tw2.core",
+    "tw2.d3",
+    "tw2.dynforms",
+    "tw2.excanvas",
+    "tw2.forms",
+    "tw2.jit",
+    "tw2.jqplugins.flot",
+    "tw2.jqplugins.gritter",
+    "tw2.jqplugins.ui",
+    "tw2.jquery",
+    "tw2.sqla"
+   ],
+   "source": "pipreqs"
+  },
+  "twisted": {
+   "projects": [
+    "Twisted"
+   ],
+   "source": "pipreqs"
+  },
+  "twitter": {
+   "projects": [
+    "python_twitter"
+   ],
+   "source": "pipreqs"
+  },
+  "txclib": {
+   "projects": [
+    "transifex_client"
+   ],
+   "source": "pipreqs"
+  },
+  "u115": {
+   "projects": [
+    "115wangpan"
+   ],
+   "source": "pipreqs"
+  },
+  "unidecode": {
+   "projects": [
+    "Unidecode"
+   ],
+   "source": "pipreqs"
+  },
+  "universe": {
+   "projects": [
+    "ansible_universe"
+   ],
+   "source": "pipreqs"
+  },
+  "usb": {
+   "projects": [
+    "pyusb"
+   ],
+   "source": "pipreqs"
+  },
+  "useless": {
+   "projects": [
+    "useless.pipes"
+   ],
+   "source": "pipreqs"
+  },
+  "userpass": {
+   "projects": [
+    "auth_userpass"
+   ],
+   "source": "pipreqs"
+  },
+  "utilities": {
+   "projects": [
+    "automakesetup.py"
+   ],
+   "source": "pipreqs"
+  },
+  "utkik": {
+   "projects": [
+    "aino_utkik"
+   ],
+   "source": "pipreqs"
+  },
+  "uwsgidecorators": {
+   "projects": [
+    "uWSGI"
+   ],
+   "source": "pipreqs"
+  },
+  "valentine": {
+   "projects": [
+    "ab"
+   ],
+   "source": "pipreqs"
+  },
+  "validate": {
+   "projects": [
+    "configobj"
+   ],
+   "source": "pipreqs"
+  },
+  "version": {
+   "projects": [
+    "chartio"
+   ],
+   "source": "pipreqs"
+  },
+  "virtualenvapi": {
+   "projects": [
+    "ar_virtualenv_api"
+   ],
+   "source": "pipreqs"
+  },
+  "vlc": {
+   "projects": [
+    "python-vlc"
+   ],
+   "source": "supplement"
+  },
+  "vyatta": {
+   "projects": [
+    "brocade_plugins"
+   ],
+   "source": "pipreqs"
+  },
+  "webdav": {
+   "projects": [
+    "Zope2"
+   ],
+   "source": "pipreqs"
+  },
+  "weblogolib": {
+   "projects": [
+    "weblogo"
+   ],
+   "source": "pipreqs"
+  },
+  "webob": {
+   "projects": [
+    "WebOb"
+   ],
+   "source": "pipreqs"
+  },
+  "websocket": {
+   "projects": [
+    "websocket_client"
+   ],
+   "source": "pipreqs"
+  },
+  "webtest": {
+   "projects": [
+    "WebTest"
+   ],
+   "source": "pipreqs"
+  },
+  "werkzeug": {
+   "projects": [
+    "Werkzeug"
+   ],
+   "source": "pipreqs"
+  },
+  "wheezy": {
+   "projects": [
+    "wheezy.caching",
+    "wheezy.core",
+    "wheezy.http"
+   ],
+   "source": "pipreqs"
+  },
+  "wikklytext": {
+   "projects": [
+    "tiddlywebwiki"
+   ],
+   "source": "pipreqs"
+  },
+  "win32api": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "win32clipboard": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "win32com": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "win32con": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "win32gui": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "win32process": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "win32ui": {
+   "projects": [
+    "pywin32"
+   ],
+   "source": "supplement"
+  },
+  "winreg": {
+   "projects": [
+    "future"
+   ],
+   "source": "pipreqs"
+  },
+  "winrm": {
+   "projects": [
+    "pywinrm"
+   ],
+   "source": "pipreqs"
+  },
+  "workflow": {
+   "projects": [
+    "Alfred_Workflow"
+   ],
+   "source": "pipreqs"
+  },
+  "wsmeext": {
+   "projects": [
+    "WSME"
+   ],
+   "source": "pipreqs"
+  },
+  "wtforms": {
+   "projects": [
+    "WTForms"
+   ],
+   "source": "pipreqs"
+  },
+  "wtfpeewee": {
+   "projects": [
+    "wtf_peewee"
+   ],
+   "source": "pipreqs"
+  },
+  "wx": {
+   "projects": [
+    "wxPython"
+   ],
+   "source": "supplement"
+  },
+  "xdg": {
+   "projects": [
+    "pyxdg"
+   ],
+   "source": "pipreqs"
+  },
+  "xdist": {
+   "projects": [
+    "pytest_xdist"
+   ],
+   "source": "pipreqs"
+  },
+  "xmldsig": {
+   "projects": [
+    "pysaml2"
+   ],
+   "source": "pipreqs"
+  },
+  "xmlenc": {
+   "projects": [
+    "pysaml2"
+   ],
+   "source": "pipreqs"
+  },
+  "xmlrpc": {
+   "projects": [
+    "pies2overrides"
+   ],
+   "source": "pipreqs"
+  },
+  "xmpp": {
+   "projects": [
+    "xmpppy"
+   ],
+   "source": "pipreqs"
+  },
+  "xstatic": {
+   "projects": [
+    "XStatic_Font_Awesome",
+    "XStatic_jQuery",
+    "XStatic_jquery_ui"
+   ],
+   "source": "pipreqs"
+  },
+  "yaml": {
+   "projects": [
+    "PyYAML"
+   ],
+   "source": "pipreqs"
+  },
+  "z3c": {
+   "projects": [
+    "z3c.autoinclude",
+    "z3c.caching",
+    "z3c.form",
+    "z3c.formwidget.query",
+    "z3c.objpath",
+    "z3c.pt",
+    "z3c.relationfield",
+    "z3c.traverser",
+    "z3c.zcmlhook"
+   ],
+   "source": "pipreqs"
+  },
+  "zmq": {
+   "projects": [
+    "pyzmq"
+   ],
+   "source": "pipreqs"
+  },
+  "zopyx": {
+   "projects": [
+    "zopyx.textindexng3"
+   ],
+   "source": "pipreqs"
+  }
+ }
+}

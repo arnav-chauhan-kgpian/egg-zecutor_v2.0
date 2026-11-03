@@ -1,0 +1,62 @@
+{
+  "description": "Eligible open-r1/codeforces problems excluded because their answers are not fixed (DESIGN.md §8.1). Found by keyword search over every eligible statement, then read by hand; six other keyword matches used 'any of them' in the story and are kept.",
+  "dataset": "open-r1/codeforces",
+  "excluded": {
+    "test": {
+      "2026/A": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple answers, print any of them."
+      },
+      "2028/D": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple solutions, print any of them."
+      },
+      "2029/E": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple answers, you may output any of them."
+      },
+      "2037/B": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "Output any possible value of $$$n$$$ and $$$m$$$ that Citlali could have provided."
+      },
+      "2038/H": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple answers, print any of them."
+      },
+      "2038/N": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple answers, print any of them."
+      },
+      "2039/B": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple solutions, output any."
+      },
+      "2040/A": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple solutions, print any of them."
+      },
+      "2048/B": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple answers, you can print any of them."
+      },
+      "2048/I1": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple arrays $$$a$$$ satisfying the conditions, you can output any of them."
+      },
+      "2055/C": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If multiple solutions exist, output any of them."
+      },
+      "2059/E2": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If there are multiple possible sequences with the minimum number of operations, output any of them."
+      },
+      "2060/B": {
+        "reason": "the statement accepts several correct answers, but open-r1 ships no checker for it, so a correct answer that differs from the reference would be graded wrong",
+        "evidence": "If so, output any valid $$$p$$$."
+      }
+    },
+    "train": {}
+  },
+  "train_split_reviewed": false
+}
